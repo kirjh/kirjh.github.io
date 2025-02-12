@@ -12,7 +12,7 @@ export default function Home() {
           </div>
           <div className="titlepage centered container">
             <div className="title">
-              <p>kirjh.github.io</p>
+              <h1>kirjh.github.io</h1>
             </div>
             <div className="pagelinks">
               <span>

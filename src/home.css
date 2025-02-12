@@ -21,9 +21,10 @@ img {
   margin: 2em;
 }
 
-.title p {
+.title h1 {
   margin: 0;
   font-size: 5em;
+  font-weight:400;
 }
 
 .pagelinks {

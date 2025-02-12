@@ -34,7 +34,7 @@ body {
 }
 
 .centered {
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
