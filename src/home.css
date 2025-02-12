@@ -1,6 +1,6 @@
 #home {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: rgb(64,149,191);
+  background: linear-gradient(90deg, rgba(64,149,191,1) 0%, rgba(117,64,191,1) 100%);
 }
 
 img {
@@ -12,9 +12,14 @@ img {
 .container {
   border-radius: 2em;
   background-color: #000000bf;
+  color: white;
+
+  padding: 2em;
 
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .image {
@@ -22,7 +27,37 @@ img {
   width: 400px;
 }
 
-.title {
+.page {
   height: 400px;
   width: 800px;
+
+  flex-direction: column;
+}
+
+.title {
+  margin: 2em;
+}
+
+.title p {
+  margin: 0;
+  font-size: 5em;
+  font-weight:200;
+}
+
+.pagelinks {
+  
+}
+
+.pagelinks a {
+  font-size: 1.5em;
+  margin: 0.5em;
+
+  background: linear-gradient(to top, #7540bf, #4095bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pagelinks a:hover {
+  color: white;
 }
