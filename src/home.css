@@ -1,25 +1,7 @@
-#home {
-  background: rgb(64,149,191);
-  background: linear-gradient(90deg, rgba(64,149,191,1) 0%, rgba(117,64,191,1) 100%);
-}
-
 img {
   align-self: center;
   border-radius: 50%;
   height: 75%;
-}
-
-.container {
-  border-radius: 2em;
-  background-color: #000000bf;
-  color: white;
-
-  padding: 2em;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .image {
@@ -27,7 +9,7 @@ img {
   width: 400px;
 }
 
-.page {
+.titlepage {
   height: 400px;
   width: 800px;
 
@@ -54,7 +36,7 @@ img {
   margin: 0.5em;
 }
 
-.pagelinks,
+.pagelinks a,
 .pagelinks a:hover,
 .pagelinks a:active,
 .pagelinks a:visited {

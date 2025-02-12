@@ -1,3 +1,25 @@
 #about {
   background-color:blue;
 }
+
+.aboutpage {
+  width: 80%;
+  height: 700px;
+
+  flex-flow: column wrap;
+}
+
+.header {
+  
+}
+
+.section {
+  
+}
+
+.sectiondivider {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+}
+
