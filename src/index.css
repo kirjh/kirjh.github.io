@@ -12,6 +12,6 @@ body { padding: 0; margin: 0; }
 
 .pagecontainer {
   padding: 1em;
-  min-height: 100vh;
+  height: calc(100vh - 2em);
   scroll-snap-align: start;
 }
