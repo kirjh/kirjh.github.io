@@ -32,6 +32,7 @@ img {
   width: 800px;
 
   flex-direction: column;
+  mix-blend-mode: multiply;
 }
 
 .title {
@@ -51,13 +52,11 @@ img {
 .pagelinks a {
   font-size: 1.5em;
   margin: 0.5em;
-
-  background: linear-gradient(to top, #7540bf, #4095bf);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
-.pagelinks a:hover {
+.pagelinks,
+.pagelinks a:hover,
+.pagelinks a:active,
+.pagelinks a:visited {
   color: white;
 }
