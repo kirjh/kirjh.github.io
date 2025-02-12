@@ -1,4 +1,5 @@
 import './home.css'
+import profileImage from './assets/profile_picture.png'
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <div id="home" className="pagecontainer">
         <div className="flexbox"> 
           <div className="image container">
-            <img src="src/assets/profile_picture.png" alt="Painting of a person wearing a rabbit mask" />
+            <img src={profileImage} alt="Painting of a person wearing a rabbit mask" />
           </div>
           <div className="page container">
             <div className="title">
