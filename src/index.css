@@ -1,3 +1,17 @@
 :root {
   
 }
+
+body { padding: 0; margin: 0; }
+
+.index {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.pagecontainer {
+  padding: 1em;
+  min-height: 100vh;
+  scroll-snap-align: start;
+}

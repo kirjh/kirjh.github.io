@@ -8,9 +8,11 @@ import Contact from './Contact.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Home />
-    <About />
-    <Projects />
-    <Contact />
+    <div className="index">
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
   </StrictMode>,
 )
