@@ -1,3 +1,62 @@
 #home {
-  background-color:aqua;
+  background: rgb(64,149,191);
+  background: linear-gradient(90deg, rgba(64,149,191,1) 0%, rgba(117,64,191,1) 100%);
+}
+
+img {
+  align-self: center;
+  border-radius: 50%;
+  height: 75%;
+}
+
+.container {
+  border-radius: 2em;
+  background-color: #000000bf;
+  color: white;
+
+  padding: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  height: 400px;
+  width: 400px;
+}
+
+.page {
+  height: 400px;
+  width: 800px;
+
+  flex-direction: column;
+  mix-blend-mode: multiply;
+}
+
+.title {
+  margin: 2em;
+}
+
+.title p {
+  margin: 0;
+  font-size: 5em;
+  font-weight:200;
+}
+
+.pagelinks {
+  
+}
+
+.pagelinks a {
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+.pagelinks,
+.pagelinks a:hover,
+.pagelinks a:active,
+.pagelinks a:visited {
+  color: white;
 }

@@ -1,5 +1,5 @@
 :root {
-  
+  font-family: 'Funnel Display', Arial, Helvetica, sans-serif;
 }
 
 body { 
@@ -20,4 +20,13 @@ body {
   padding: 1em;
   height: calc(100vh - 2em);
   scroll-snap-align: start;
+}
+
+.flexbox {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
 }
