@@ -4,10 +4,14 @@ export default function Home() {
   return (
     <>
       <div id="home" className="pagecontainer">
-        <p>this is a paragraph</p>
-        <a href="#about">click me</a><br/>
-        <a href="#projects">click me</a><br/>
-        <a href="#contact">click me</a><br/>
+        <div className="flexbox"> 
+          <div className="image container">
+            <img src="src/assets/profile_picture.png" alt="Painting of a person wearing a rabbit mask" />
+          </div>
+          <div className="title container">
+
+          </div>
+        </div>
       </div>
     </>
   );
