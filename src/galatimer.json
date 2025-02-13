@@ -11,13 +11,17 @@
     "Javascript, HTML, CSS",
 
   "image": {
-    "src1": "/galatimer1.png",
-    "src2": "",
-    "src3": ""
-  },
-  "alt": {
-    "alt1": "A screenshot of the timer in use, showing 20 minutes remaining.",
-    "alt2": "",
-    "alt3": ""
+    "img1": {
+      "src": "/galatimer1.png",
+      "alt": "A screenshot of the timer in use, showing 20 minutes remaining."
+    },
+    "img2": {
+      "src": "/galatimer2.png",
+      "alt": "A screenshot of the timer in use, showing 7 minutes remaining. A side tab is open showing two tasks, one complete and one incomplete."
+    },
+    "img21": {
+      "src": "/galatimer3.png",
+      "alt": "A screenshot of the timer. A side tab is open showing various settings for configuring the timer."
+    }
   }
 }

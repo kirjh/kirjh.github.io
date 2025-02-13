@@ -38,7 +38,10 @@ function Project({ project }) {
             </div>
           </div>
           <div className="section">
-            <img src={project.image.src1} alt={project.alt.alt1} />
+            {Object.keys(project.image).map((img) =>
+              <img src={project.image[img].src} alt={project.image[img].alt} />
+            )}
+            
           </div>
         </div>
         
