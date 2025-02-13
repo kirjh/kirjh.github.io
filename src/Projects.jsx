@@ -1,5 +1,6 @@
 import './projects.css'
 import './index.css'
+import './fonts.css'
 
 import galatimer from './galatimer.json'
 

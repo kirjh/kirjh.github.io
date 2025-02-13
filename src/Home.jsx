@@ -1,5 +1,6 @@
 import './home.css'
 import './index.css'
+import './fonts.css'
 import profileImage from './assets/profile_picture.png'
 
 export default function Home() {

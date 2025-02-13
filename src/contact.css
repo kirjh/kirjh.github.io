@@ -5,10 +5,6 @@
   flex-flow: column nowrap;
 }
 
-.padder {
-  padding: 2em 2em 0 2em;
-}
-
 .contactdivider {
   display: flex;
   justify-content: center;
@@ -33,12 +29,3 @@ object {
   z-index: 0;
 }
 
-.contactbox a,
-.contactbox a:active,
-.contactbox a:visited {
-  position: relative;
-  font-weight:400;
-  font-size: 1.4em;
-  color: #4095bf;
-  z-index: 1;
-}
