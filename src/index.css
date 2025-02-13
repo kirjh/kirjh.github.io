@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Funnel Display', Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body { 
@@ -22,6 +22,22 @@ body {
   scroll-snap-align: start;
 }
 
+.container {
+  border-radius: 2em;
+  background-color: #000000bf;
+  color: white;
+
+  padding: 2em;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.centered {
+  justify-content: center;
+  align-items: center;
+}
+
 .flexbox {
   height: 100%;
 
@@ -29,4 +45,12 @@ body {
   justify-content: center;
   align-items: center;
   gap: 3em;
+}
+
+#home,
+#about,
+#projects,
+#contact {
+  background: rgb(64,149,191);
+  background: linear-gradient(90deg, rgba(64,149,191,1) 0%, rgba(117,64,191,1) 100%);
 }

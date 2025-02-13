@@ -1,4 +1,5 @@
 import './home.css'
+import './index.css'
 import profileImage from './assets/profile_picture.png'
 
 export default function Home() {
@@ -6,12 +7,12 @@ export default function Home() {
     <>
       <div id="home" className="pagecontainer">
         <div className="flexbox"> 
-          <div className="image container">
+          <div className="image centered container">
             <img src={profileImage} alt="Painting of a person wearing a rabbit mask" />
           </div>
-          <div className="page container">
+          <div className="titlepage centered container">
             <div className="title">
-              <p>kirjh.github.io</p>
+              <h1>kirjh.github.io</h1>
             </div>
             <div className="pagelinks">
               <span>
