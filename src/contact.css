@@ -37,8 +37,8 @@ object {
 .contactbox a:active,
 .contactbox a:visited {
   position: relative;
-  font-weight:600;
-  font-size: 2em;
+  font-weight:400;
+  font-size: 1.4em;
   color: #4095bf;
   z-index: 1;
 }

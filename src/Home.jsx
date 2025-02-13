@@ -8,7 +8,7 @@ export default function Home() {
       <div id="home" className="pagecontainer">
         <div className="flexbox"> 
           <div className="image centered container">
-            <img src={profileImage} alt="Painting of a person wearing a rabbit mask" />
+            <img id="pfp" src={profileImage} alt="Painting of a person wearing a rabbit mask" />
           </div>
           <div className="titlepage centered container">
             <div className="title">

@@ -1,5 +1,23 @@
 {
-  "name": "test",
-  "h1": "hello",
-  "h2": "world"
+  "name": "Gala Study Timer",
+  "h1": "Right",
+  "h2": "In your browser",
+
+  "url": "https://github.com",
+
+  "description":
+    "A browser extension built with Manifist V3. Functionalities include timers with customizable lengths, to-do list, and progress tracking that is stored locally in the browser.",
+  "techstack":
+    "Javascript, HTML, CSS",
+
+  "image": {
+    "src1": "./public/galatimer1.png",
+    "src2": "",
+    "src3": ""
+  },
+  "alt": {
+    "alt1": "A screenshot of the timer in use, showing 20 minutes remaining.",
+    "alt2": "",
+    "alt3": ""
+  }
 }

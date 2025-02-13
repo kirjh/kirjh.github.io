@@ -4,3 +4,18 @@
 
   flex-flow: column wrap;
 }
+
+.projectlink a,
+.projectlink a:active,
+.projectlink a:visited {
+  position: relative;
+  font-weight:400;
+  font-size: 1.4em;
+  color: #4095bf;
+  z-index: 1;
+}
+
+.section img {
+  width: 100%;
+  border-radius: 1em;
+}
