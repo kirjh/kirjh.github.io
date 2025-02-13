@@ -1,3 +1,21 @@
-#contact {
-  background-color:red;
+.contactpage {
+  width: 80%;
+  height: 700px;
+
+  flex-flow: column nowrap;
+}
+
+.padder {
+  padding: 2em 2em 0 2em;
+}
+
+.contactbox {
+  width: 12em;
+  aspect-ratio: 1;
+  background-color: red;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
