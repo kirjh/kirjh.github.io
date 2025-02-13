@@ -1,33 +1,27 @@
-#about {
-  background-color:blue;
-}
-
 .aboutpage {
   width: 80%;
-  height: 700px;
+  
 
   flex-flow: column wrap;
 }
 
 .section {
-  width: 100%;
+  max-width: 40%;
   margin: 2em;
 }
 
 .sectiondivider {
   display: flex;
   justify-content: space-evenly;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
 }
 
-.header1,
-.header2 {
+.header {
   padding-left: 1em;
   position: relative;
 }
 
-.header1 h1,
-.header2 h1 {
+.header h1 {
   position: absolute;
   top: -1.4em;
   left: -0.1em;
@@ -37,8 +31,7 @@
   z-index: 0;
 }
 
-.header1 h2,
-.header2 h2 {
+.header h2 {
   position: relative;
   font-size: 4em;
   font-weight: 400;

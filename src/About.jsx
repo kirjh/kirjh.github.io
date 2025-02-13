@@ -9,7 +9,7 @@ export default function About() {
           <div className="aboutpage container">
             <div className="sectiondivider">
               <div className="section">
-                <div className="header1">
+                <div className="header">
                   <h1>About</h1>
                   <h2>Toby Lin</h2>
                 </div>
@@ -20,7 +20,7 @@ export default function About() {
                 </div>
               </div>
               <div className="section">
-                <div className="header2">
+                <div className="header">
                   <h1>What</h1>
                   <h2>I do</h2>
                 </div>

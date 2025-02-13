@@ -1,3 +1,44 @@
-#contact {
-  background-color:red;
+.contactpage {
+  width: 80%;
+  height: 700px;
+
+  flex-flow: column nowrap;
+}
+
+.padder {
+  padding: 2em 2em 0 2em;
+}
+
+.contactdivider {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 1em;
+}
+
+.contactbox {
+  width: 12em;
+  aspect-ratio: 1;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+object {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.contactbox a,
+.contactbox a:active,
+.contactbox a:visited {
+  position: relative;
+  font-weight:600;
+  font-size: 2em;
+  color: #4095bf;
+  z-index: 1;
 }
