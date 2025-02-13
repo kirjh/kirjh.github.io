@@ -1,10 +1,10 @@
 import './contact.css'
 import './index.css'
 import './about.css'
-import linkedinIcon from './assets/linkedinicon.png'
-import blueskyIcon from './assets/blueskyicon.png'
-import emailIcon from './assets/emailicon.png'
-import githubIcon from './assets/githubicon.png'
+import linkedinIcon from './assets/linkedinicon.svg'
+import blueskyIcon from './assets/blueskyicon.svg'
+import emailIcon from './assets/emailicon.svg'
+import githubIcon from './assets/githubicon.svg'
 
 export default function Contact() {
   return (
@@ -19,10 +19,10 @@ export default function Contact() {
               </div>
             </div>
             <div className="contactdivider">
-              <ContactBox />
-              <ContactBox />
-              <ContactBox />
-              <ContactBox />
+              <ContactBox title="Email" link="mailto:example@example.com" src={emailIcon}/>
+              <ContactBox title="GitHub" link="https://github.com" src={githubIcon}/>
+              <ContactBox title="LinkedIn" link="https://ca.linkedin.com/" src={linkedinIcon}/>
+              <ContactBox title="BlueSky" link="https://bsky.app/" src={blueskyIcon}/>
             </div>
           </div>
         </div>
@@ -31,17 +31,12 @@ export default function Contact() {
   );
 }
 
-function ContactBox() {
+function ContactBox({ title, link, src}) {
   return (
     <>
       <div className="contactbox">
-        <h3>
-          Title
-        </h3>
-        <p>
-          Link here
-        </p>
-
+        <a href={link}>{title}</a>
+        <object data={src} height='50%'></object>
       </div>
     </>
   )

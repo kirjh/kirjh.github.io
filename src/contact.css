@@ -19,11 +19,26 @@
 .contactbox {
   width: 12em;
   aspect-ratio: 1;
-  background-color: red;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
+object {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.contactbox a,
+.contactbox a:active,
+.contactbox a:visited {
+  position: relative;
+  font-weight:600;
+  font-size: 2em;
+  color: #4095bf;
+  z-index: 1;
+}
