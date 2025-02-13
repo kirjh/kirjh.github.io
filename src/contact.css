@@ -39,6 +39,6 @@ object {
   position: relative;
   font-weight:400;
   font-size: 1.4em;
-  color: #4095bf;
+  color: var(--hyperlink);
   z-index: 1;
 }

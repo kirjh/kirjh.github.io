@@ -27,7 +27,7 @@
   position: absolute;
   top: -1.4em;
   left: -0.1em;
-  color: #80808080;
+  color: var(--bgfont);
   font-weight: 700;
   font-size: 6em;
   z-index: 0;
@@ -49,7 +49,7 @@ p a,
 p a:active,
 p a:visited {
   font-weight:600;
-  color: #4095bf;
+  color: var(--hyperlink);
 }
 
 h3 {

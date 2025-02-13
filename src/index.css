@@ -1,5 +1,9 @@
 :root {
   font-family: 'Quicksand', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --font: #ffffff;
+  --bgfont: #80808080;
+  --background: #000000bf;
+  --hyperlink: #20a1df;
 }
 
 body { 
@@ -24,7 +28,7 @@ body {
 
 .container {
   border-radius: 2em;
-  background-color: #000000bf;
+  background-color: var(--background);
   color: white;
 
   padding: 2em;
