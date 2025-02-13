@@ -38,10 +38,15 @@ function Project({ project }) {
             </div>
           </div>
           <div className="section">
-            {Object.keys(project.image).map((img) =>
-              <img src={project.image[img].src} alt={project.image[img].alt} />
-            )}
-            
+            <div className="slidecontainer">
+              <div className="slides">
+                  {Object.keys(project.image).map((img) =>
+                    <div className="slide" key={project.image[img].id}>
+                      <img src={project.image[img].src} alt={project.image[img].alt} />
+                    </div>
+                  )}
+                </div>
+            </div>
           </div>
         </div>
         
