@@ -1,6 +1,10 @@
 import './contact.css'
 import './index.css'
 import './about.css'
+import linkedinIcon from './assets/linkedinicon.png'
+import blueskyIcon from './assets/blueskyicon.png'
+import emailIcon from './assets/emailicon.png'
+import githubIcon from './assets/githubicon.png'
 
 export default function Contact() {
   return (
@@ -14,7 +18,7 @@ export default function Contact() {
                 <h2>Get down to business</h2>
               </div>
             </div>
-            <div className="sectiondivider">
+            <div className="contactdivider">
               <ContactBox />
               <ContactBox />
               <ContactBox />

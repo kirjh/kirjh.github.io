@@ -9,6 +9,13 @@
   padding: 2em 2em 0 2em;
 }
 
+.contactdivider {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 1em;
+}
+
 .contactbox {
   width: 12em;
   aspect-ratio: 1;
@@ -19,3 +26,4 @@
   justify-content: center;
   align-items: center;
 }
+
