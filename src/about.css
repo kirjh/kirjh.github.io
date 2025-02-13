@@ -1,58 +1,5 @@
 .aboutpage {
   width: 80%;
   
-
   flex-flow: column wrap;
-}
-
-.section {
-  max-width: 40%;
-  min-width: 40%;
-  margin: 2em;
-  
-}
-
-.sectiondivider {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-}
-
-.header {
-  padding-left: 1em;
-  position: relative;
-}
-
-.header h1 {
-  position: absolute;
-  top: -1.4em;
-  left: -0.1em;
-  color: var(--bgfont);
-  font-weight: 700;
-  font-size: 6em;
-  z-index: 0;
-}
-
-.header h2 {
-  position: relative;
-  font-size: 4em;
-  font-weight: 400;
-  z-index: 1;
-}
-
-.boldtext {
-  font-weight:600;
-  font-size: 1.2em;
-}
-
-p a,
-p a:active,
-p a:visited {
-  font-weight:600;
-  color: var(--hyperlink);
-}
-
-h3 {
-  font-weight:400;
-  font-size: 1.4em;
 }

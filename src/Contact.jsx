@@ -1,6 +1,6 @@
 import './contact.css'
 import './index.css'
-import './about.css'
+import './fonts.css'
 import linkedinIcon from './assets/linkedinicon.svg'
 import blueskyIcon from './assets/blueskyicon.svg'
 import emailIcon from './assets/emailicon.svg'

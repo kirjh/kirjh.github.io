@@ -29,7 +29,7 @@ body {
 .container {
   border-radius: 2em;
   background-color: var(--background);
-  color: white;
+  color: var(--font);
 
   padding: 2em;
 
@@ -49,6 +49,19 @@ body {
   justify-content: center;
   align-items: center;
   gap: 3em;
+}
+
+.section {
+  max-width: 40%;
+  min-width: 40%;
+  margin: 2em;
+  
+}
+
+.sectiondivider {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
 }
 
 #home,

@@ -1,5 +1,6 @@
 import './about.css'
 import './index.css'
+import './fonts.css'
 
 export default function About() {
   return (
