@@ -9,6 +9,17 @@
   flex-flow: column wrap;
 }
 
+.section {
+  width: 100%;
+  margin: 2em;
+}
+
+.sectiondivider {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+}
+
 .header1,
 .header2 {
   padding-left: 1em;
@@ -34,14 +45,19 @@
   z-index: 1;
 }
 
-.section {
-  width: 100%;
-  margin: 2em;
+.boldtext {
+  font-weight:600;
+  font-size: 1.2em;
 }
 
-.sectiondivider {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row nowrap;
+p a,
+p a:active,
+p a:visited {
+  font-weight:600;
+  color: #4095bf;
 }
 
+h3 {
+  font-weight:400;
+  font-size: 1.4em;
+}
