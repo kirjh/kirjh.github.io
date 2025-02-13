@@ -11,7 +11,7 @@
     "Javascript, HTML, CSS",
 
   "image": {
-    "src1": "./public/galatimer1.png",
+    "src1": "/galatimer1.png",
     "src2": "",
     "src3": ""
   },
