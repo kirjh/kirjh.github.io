@@ -12,11 +12,13 @@ export default function Projects() {
         <div className="flexbox">
           <div className="slidecontainer">
             <div className="slides">
-              <div className="slide">
+              <div className="slide" id="galatimer">
                 <Project project={galatimer}/>
+                <a href="#fasc" className="right">&gt;</a>
               </div>
-              <div className="slide">
+              <div className="slide" id="fasc">
                 <Project project={fasc}/>
+                <a href="#galatimer" className="left">&lt;</a>
               </div>
             </div>
           </div>
@@ -50,11 +52,39 @@ function Project({ project }) {
           <div className="section">
             <div className="slidecontainer">
               <div className="slides">
-                  {Object.keys(project.image).map((img) =>
-                    <div className="slide" key={project.image[img].id}>
-                      <img src={project.image[img].src} alt={project.image[img].alt} />
-                    </div>
-                  )}
+                  {Object.keys(project.image).map((img) => {
+                    if (project.image[img].id == 0) {
+                      if (Object.keys(project.image).length > 1) {
+                        return (
+                          <div className="slide" key={project.image[img].id} id={`${project.name}${project.image[img].id}`}>
+                            <img src={project.image[img].src} alt={project.image[img].alt} />
+                            <a href={`#${project.name}${project.image[img].id + 1}`} className="sright">&gt;</a>
+                          </div>
+                        )
+                      } else {
+                        return (
+                          <div className="slide" key={project.image[img].id} id={`${project.name}${project.image[img].id}`}>
+                            <img src={project.image[img].src} alt={project.image[img].alt} />
+                          </div>
+                        )
+                      }
+                    } else if (project.image[img].id == Object.keys(project.image).length - 1) {
+                      return (
+                        <div className="slide" key={project.image[img].id} id={`${project.name}${project.image[img].id}`}>
+                          <img src={project.image[img].src} alt={project.image[img].alt} />
+                          <a href={`#${project.name}${project.image[img].id - 1}`} className="sleft">&lt;</a>
+                        </div>
+                      )
+                    } else {
+                      return (
+                        <div className="slide" key={project.image[img].id} id={`${project.name}${project.image[img].id}`}>
+                          <img src={project.image[img].src} alt={project.image[img].alt} />
+                          <a href={`#${project.name}${project.image[img].id + 1}`} className="sright">&gt;</a>
+                          <a href={`#${project.name}${project.image[img].id - 1}`} className="sleft">&lt;</a>
+                        </div>
+                      )
+                    }
+                  })}
                 </div>
             </div>
           </div>

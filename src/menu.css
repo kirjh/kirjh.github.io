@@ -1,0 +1,38 @@
+.menu {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  background-color: var(--background);
+  border-radius: 1em;
+  z-index: 20;
+}
+.menubutton {
+  padding: 1em 2em 1em 2em;
+  float: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menubutton a,
+.menubutton a:visited {
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.7em;
+  position: relative;
+  font-weight:400;
+  font-size: 1.4em;
+  color: var(--font);
+  transition: 0.5s;
+}
+
+.menubutton a:hover {
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
+.menubutton a:active {
+  background-color: transparent;
+  color: var(--font);
+}
