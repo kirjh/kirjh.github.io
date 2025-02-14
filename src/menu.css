@@ -1,0 +1,26 @@
+.menu {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  background-color: var(--background);
+  border-radius: 1em;
+  z-index: 20;
+}
+.menubutton {
+  padding: 2em 4em 2em 4em;
+  float: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menubutton a,
+.menubutton a:active,
+.menubutton a:visited {
+  
+  position: relative;
+  font-weight:400;
+  font-size: 1.4em;
+  color: var(--font);
+}
