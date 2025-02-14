@@ -7,7 +7,7 @@
   z-index: 20;
 }
 .menubutton {
-  padding: 2em 4em 2em 4em;
+  padding: 1em 2em 1em 2em;
   float: left;
 
   display: flex;
@@ -16,11 +16,23 @@
 }
 
 .menubutton a,
-.menubutton a:active,
 .menubutton a:visited {
-  
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.7em;
   position: relative;
   font-weight:400;
   font-size: 1.4em;
+  color: var(--font);
+  transition: 0.5s;
+}
+
+.menubutton a:hover {
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
+.menubutton a:active {
+  background-color: transparent;
   color: var(--font);
 }

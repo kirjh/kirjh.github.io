@@ -34,19 +34,39 @@ h3 {
   font-size: 1.2em;
 }
 
-p a,
-p a:active,
-p a:visited {
-  font-weight:600;
-  color: var(--hyperlink);
-}
-
 div a,
 div a:active,
 div a:visited {
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.7em;
   position: relative;
   font-weight:400;
   font-size: 1.4em;
   color: var(--hyperlink);
   z-index: 1;
+  transition: 0.5s;
+}
+
+div a:hover {
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
+div a:active {
+  background-color: transparent;
+  color: var(--font);
+}
+
+p a,
+p a:active,
+p a:hover,
+p a:visited {
+  font-weight:600;
+  background-color: transparent;
+  color: var(--hyperlink);
+  font-size: 1em;
+  padding: 0;;
+  border-radius: 0.7em;
+  transition: 0s;
 }
