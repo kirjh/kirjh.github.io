@@ -19,7 +19,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="contactdivider">
-              <ContactBox title="Email" link="mailto:example@example.com" src={emailIcon}/>
+              <ContactBox title="Email" link="mailto:foo@bar.com" src={emailIcon}/>
               <ContactBox title="GitHub" link="https://github.com" src={githubIcon}/>
               <ContactBox title="LinkedIn" link="https://ca.linkedin.com/" src={linkedinIcon}/>
               <ContactBox title="BlueSky" link="https://bsky.app/" src={blueskyIcon}/>

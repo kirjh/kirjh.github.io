@@ -3,7 +3,7 @@
   "h1": "Right",
   "h2": "In your browser",
 
-  "url": "https://github.com",
+  "url": "https://github.com/kirjh/galatimer",
 
   "description":
     "A browser extension built with Manifist V3. Functionalities include timers with customizable lengths, to-do list, and progress tracking that is stored locally in the browser.",
