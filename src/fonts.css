@@ -34,9 +34,9 @@ h3 {
   font-size: 1.2em;
 }
 
-div a,
-div a:active,
-div a:visited {
+.big a,
+.big a:active,
+.big a:visited {
   padding: 0.5em 1em 0.5em 1em;
   border-radius: 0.7em;
   position: relative;
@@ -47,13 +47,13 @@ div a:visited {
   transition: 0.5s;
 }
 
-div a:hover {
+.big a:hover {
   background-color: white;
   color: black;
   mix-blend-mode: screen;
 }
 
-div a:active {
+.big a:active {
   background-color: transparent;
   color: var(--font);
 }

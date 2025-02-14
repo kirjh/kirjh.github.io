@@ -37,7 +37,7 @@
   margin-right: 1em;
   transform-origin: center center;
   transform: scale(1);
-  transition: transform 0.5s;
+  transition: transform 0.1s;
   position: relative;
   
   display: flex;
@@ -48,4 +48,80 @@
 .slide > img {
   width: 100%;
   border-radius: 1em;
+}
+
+.right,
+.right:active,
+.right:visited,
+.left,
+.left:active,
+.left:visited {
+  position: absolute;
+
+  text-decoration: none;
+  color: var(--font);
+  font-size: 3em;
+
+  border-radius: 0.6em;
+  
+  height: 4em;
+  width: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background);
+  transition: 0.5s;
+}
+
+.right {
+  right: 0.5em;
+}
+
+.left {
+  left: 0.5em;
+}
+
+.sright,
+.sright:active,
+.sright:hover,
+.sright:visited,
+.sleft,
+.sleft:active,
+.sleft:hover,
+.sleft:visited {
+  position: absolute;
+
+  text-decoration: none;
+  color: var(--font);
+  font-size: 1.5em;
+
+  border-radius: 1em;
+  
+  height: 4em;
+  width: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background);
+}
+
+.sright {
+  right: 0.5em;
+}
+
+.sleft {
+  left: 0.5em;
+}
+
+.right:hover,
+.left:hover,
+.sright:hover,
+.sleft:hover {
+  mix-blend-mode: screen;
+  background-color: white;
+  color: black;
 }

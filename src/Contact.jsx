@@ -34,7 +34,7 @@ export default function Contact() {
 function ContactBox({ title, link, src}) {
   return (
     <>
-      <div className="contactbox">
+      <div className="contactbox big">
         <a href={link}>{title}</a>
         <object data={src} height='50%'></object>
       </div>
