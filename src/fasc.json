@@ -1,0 +1,20 @@
+{
+  "name": "Find A Stronger Computer",
+  "h1": "Compile",
+  "h2": "Faster",
+
+  "url": "https://github.com",
+
+  "description":
+    "Web portal that connects users to each other based on their needs for compiling code.",
+  "techstack":
+    "Javascript, HTML, CSS, Firebase, Electon",
+
+  "image": {
+    "img1": {
+      "id": 0,
+      "src": "/fasc1.png",
+      "alt": "A screenshot of the login portal."
+    }
+  }
+}

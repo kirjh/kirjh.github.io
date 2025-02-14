@@ -3,13 +3,23 @@ import './index.css'
 import './fonts.css'
 
 import galatimer from './galatimer.json'
+import fasc from './fasc.json'
 
 export default function Projects() {
   return (
     <>
       <div id="projects" className="pagecontainer">
-        <div className="flexbox"> 
-          <Project project={galatimer}/>
+        <div className="flexbox">
+          <div className="slidecontainer">
+            <div className="slides">
+              <div className="slide">
+                <Project project={galatimer}/>
+              </div>
+              <div className="slide">
+                <Project project={fasc}/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -38,7 +48,15 @@ function Project({ project }) {
             </div>
           </div>
           <div className="section">
-            <img src={project.image.src1} alt={project.alt.alt1} />
+            <div className="slidecontainer">
+              <div className="slides">
+                  {Object.keys(project.image).map((img) =>
+                    <div className="slide" key={project.image[img].id}>
+                      <img src={project.image[img].src} alt={project.image[img].alt} />
+                    </div>
+                  )}
+                </div>
+            </div>
           </div>
         </div>
         
