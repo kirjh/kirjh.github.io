@@ -16,7 +16,7 @@ export default function Projects() {
                 <Project project={galatimer}/>
               </div>
               <div className="slide">
-                <Project project={galatimer}/>
+                <Project project={fasc}/>
               </div>
             </div>
           </div>

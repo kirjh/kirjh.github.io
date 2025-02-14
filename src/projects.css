@@ -25,6 +25,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scrollbar-color: #ffffff transparent;
 }
 
 .slide {

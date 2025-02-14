@@ -1,30 +1,20 @@
 {
-  "name": "Gala Study Timer",
-  "h1": "Right",
-  "h2": "In your browser",
+  "name": "Find A Stronger Computer",
+  "h1": "Compile",
+  "h2": "Faster",
 
   "url": "https://github.com",
 
   "description":
-    "A browser extension built with Manifist V3. Functionalities include timers with customizable lengths, to-do list, and progress tracking that is stored locally in the browser.",
+    "Web portal that connects users to each other based on their needs for compiling code.",
   "techstack":
-    "Javascript, HTML, CSS",
+    "Javascript, HTML, CSS, Firebase, Electon",
 
   "image": {
     "img1": {
       "id": 0,
-      "src": "/galatimer1.png",
-      "alt": "A screenshot of the timer in use, showing 20 minutes remaining."
-    },
-    "img2": {
-      "id": 1,
-      "src": "/galatimer2.png",
-      "alt": "A screenshot of the timer in use, showing 7 minutes remaining. A side tab is open showing two tasks, one complete and one incomplete."
-    },
-    "img21": {
-      "id": 2,
-      "src": "/galatimer3.png",
-      "alt": "A screenshot of the timer. A side tab is open showing various settings for configuring the timer."
+      "src": "/fasc1.png",
+      "alt": "A screenshot of the login portal."
     }
   }
 }
