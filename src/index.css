@@ -21,8 +21,7 @@ body {
 }
 
 .pagecontainer {
-  padding: 1em;
-  height: calc(100vh - 2em);
+  height: calc(100vh);
   scroll-snap-align: start;
 }
 

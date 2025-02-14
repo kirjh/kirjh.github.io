@@ -3,13 +3,23 @@ import './index.css'
 import './fonts.css'
 
 import galatimer from './galatimer.json'
+import fasc from './fasc.json'
 
 export default function Projects() {
   return (
     <>
       <div id="projects" className="pagecontainer">
-        <div className="flexbox"> 
-          <Project project={galatimer}/>
+        <div className="flexbox">
+          <div className="slidecontainer">
+            <div className="slides">
+              <div className="slide">
+                <Project project={galatimer}/>
+              </div>
+              <div className="slide">
+                <Project project={galatimer}/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
