@@ -16,7 +16,7 @@
      transform="translate(0,-6.6145832)">
     <path
        id="rect1"
-       style="fill:#ffff00;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:white;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round"
        d="M 0,6.6145832 V 13.229166 H 6.6145832 A 6.614583,6.614583 0 0 1 0,6.6145832 Z M 6.6145832,13.229166 H 13.229166 V 6.6145832 A 6.614583,6.614583 0 0 1 6.6145832,13.229166 Z" />
   </g>
 </svg>

@@ -1,3 +1,10 @@
+:root {
+  --light_bg: #ffffff;
+  --light_font: #000000;
+
+  --dark_bg: #242424;
+}
+
 html,
 body {
   margin: 0;
