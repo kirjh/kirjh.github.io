@@ -1,0 +1,15 @@
+.home {
+  background-color: red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test {
+  background-color: white;
+  width: 80%;
+  height: 90vh;
+
+  flex: 0 0 auto;
+}
