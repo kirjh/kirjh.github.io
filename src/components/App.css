@@ -1,4 +1,4 @@
-.home {
+.app {
   background-color: var(--light_bg);
 
   display: flex;
@@ -16,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   .test,
-  .home {
+  .app {
     background-color: var(--dark_bg);
   }
 }
