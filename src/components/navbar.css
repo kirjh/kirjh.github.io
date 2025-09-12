@@ -2,7 +2,7 @@
   position: sticky;
   top: 1.5em;
 
-  background-color: #444;
+  background-color: var(--light_menu);
 
   border-radius: 1.5em;
   margin-top: 1.5em;
@@ -16,10 +16,20 @@
 }
 .navbar a,
 .navbar a:after {
-  color: white;
+  color: var(--light_font);
 }
 
 .navbar a:hover {
   text-decoration: underline;
   color:aqua;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: var(--dark_menu);
+  }
+  .navbar a,
+  .navbar a:after {
+    color: var(--dark_font);
+  }
 }

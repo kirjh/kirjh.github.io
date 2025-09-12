@@ -1,9 +1,11 @@
 :root {
-  --light_bg: #ffffff;
-  --light_font: #000000;
+  --light_bg: #fff;
+  --light_font: #000;
+  --light_menu: #d4d4d4;
 
   --dark_bg: #242424;
-  --dark_font: #ffffff
+  --dark_font: #fff;
+  --dark_menu: #333;
 }
 
 html,

@@ -24,7 +24,7 @@
   width: calc(100% * 54/52);
   left: calc(100% * -1/52);
   bottom: calc(100% * -1/104);
-  color: white;
+  color: var(--light_bg);
 }
 
 .splash {
