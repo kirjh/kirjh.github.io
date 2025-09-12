@@ -26,7 +26,7 @@ function Border() {
 function Splash() {
   return (
     <>
-      <div className="splashcontainer">
+      <div className="splashcontainer" id="home">
         <div className="splash splash-1"></div>
         <div className="splash splash-2"></div>
         <div className="splash splash-3"></div>

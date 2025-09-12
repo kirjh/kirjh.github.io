@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Splash from './Splash.jsx'
+import Navbar from './Navbar.jsx'
 import './Home.css'
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
     <>
       <div className="home">
         <Splash />
+        <Navbar />
         <div className="test"></div>
       </div>
     </>

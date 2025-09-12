@@ -1,5 +1,5 @@
 .home {
-  background-color: white;
+  background-color: var(--light_bg);
 
   display: flex;
   flex-direction: column;
@@ -7,9 +7,9 @@
 }
 
 .test {
-  background-color: white;
+  background-color: var(--light_bg);
   width: 80%;
-  height: 90vh;
+  height: 200vh;
 
   flex: 0 0 auto;
 }

@@ -1,6 +1,7 @@
 .splashcontainer {
   width: 80%;
-  height: 90vh;
+  max-width: 2560px;
+  height: 100vh;
 
   background-color: #5D6091;
   flex: 0 0 auto;
