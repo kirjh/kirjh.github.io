@@ -1,7 +1,7 @@
 .splashcontainer {
   width: 80%;
-  max-width: 2560px;
-  height: 100vh;
+  max-width: 1440px;
+  height: 90vh;
 
   background-color: #5D6091;
   flex: 0 0 auto;
@@ -9,11 +9,13 @@
   overflow: hidden;
 }
 
-@media (max-width: 1080px) {
+
+@media (orientation: portrait) or (max-width: 1080px) {
   .splashcontainer {
     width: 100%;
   }
 }
+
 
 .splash {
   pointer-events: none;
