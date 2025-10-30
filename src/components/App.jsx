@@ -11,14 +11,12 @@ function Home() {
 
   return (
     <>
-      <div className="app">
-        <Splash />
-        <Navbar />
-        <About />
-        <Projects />
-        <Contact />
-        <div className="test"></div>
-      </div>
+      <Splash />
+      <Navbar />
+      <About />
+      <Projects />
+      <Contact />
+      <div className="test"></div>
     </>
   )
 }
