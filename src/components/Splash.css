@@ -7,21 +7,12 @@
 .splash-container {
   grid-column-start: 1;
   grid-row-start: 1;
-  width: 80%;
   max-width: 1440px;
 
   background-color: #5D6091;
   position: relative;
   overflow: hidden;
 }
-
-
-@media (orientation: portrait) or (max-width: 1080px) {
-  .splash-container {
-    width: 100%;
-  }
-}
-
 
 .splash {
   pointer-events: none;

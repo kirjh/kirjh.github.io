@@ -1,4 +1,6 @@
 import './Splash.css'
+import './index.css'
+import {useRef, useEffect} from 'react'
 
 function Border() {
   return (
@@ -23,11 +25,28 @@ function Border() {
     </>
   )
 }
+
 function Splash() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      document.querySelector(".navbar").classList.toggle("pinned", !(entry.intersectionRatio > 0));
+    }, {threshold: 0});
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      observer.disconnect();
+    }
+  }, []);
+
   return (
     <>
       <div className="spacer"></div>
-      <div className="splash-container" id="home">
+      <div className="splash-container container" id="home" ref={ref}>
         <div className="splash splash-1"></div>
         <div className="splash splash-2"></div>
         <div className="splash splash-3"></div>

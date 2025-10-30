@@ -1,16 +1,18 @@
 .navbar {
   position: sticky;
-  top: 1.5em;
+  top: 1em;
   z-index: 100;
   grid-column-start: 1;
   grid-row-start: 2;
 
   background-color: var(--light_menu);
-  font-size: 1.5em;
+  font-size: 1.7em;
 
-  border-radius: 1em;
+  border-radius: 1.5em;
   margin: 1em 0 1.5em 0;
   padding: 0.5em 1em;
+
+  transition: all 0.5s;
 }
 
 .navbar a {
@@ -21,6 +23,10 @@
 .navbar a,
 .navbar a:after {
   color: var(--light_font);
+}
+
+.navbar.pinned {
+  font-size: 1.2em;
 }
 
 .navbar a:hover {
