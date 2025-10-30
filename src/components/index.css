@@ -17,6 +17,7 @@
 #root,
 html,
 body {
+  scroll-behavior: smooth;
   margin: 0;
   display: grid;
   grid-template-rows: 1fr min-content;
@@ -35,9 +36,17 @@ body {
 .container {
   width: 80%;
 }
+.flex-container {
+  width: 80%;
+  flex-direction: row;
+}
 
 @media (orientation: portrait) or (max-width: 1080px) {
   .container {
     width: 100%;
+  }
+  .flex-container {
+    width: auto;
+    flex-direction: column;
   }
 }

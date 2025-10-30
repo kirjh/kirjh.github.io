@@ -1,3 +1,18 @@
 #about {
   max-width: 1440px;
+  padding: 3em 0.5em;
+  display: flex;
+}
+
+.d {
+  margin: 2em;
+  padding: 1em;
+  background-color:aquamarine;
+  border-radius: 1.5em;
+}
+
+@media (orientation: portrait) or (max-width: 1080px) {
+  #about {
+
+  }
 }
