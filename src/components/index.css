@@ -1,13 +1,15 @@
 :root {
   --light_bg: #fff;
   --light_font: #000;
-  --light_menu: #d4d4d4;
-  --light_menu_font: #000;
+  --light_menu: #999;
+  --light_sub_font: #999;
+  --light_menu_font: #fff;
 
   --dark_bg: #242424;
   --dark_font: #fff;
-  --dark_menu: #333;
-  --dark_menu_font: #222;
+  --dark_menu: #111;
+  --dark_sub_font: #777;
+  --dark_menu_font: #777;
 
   font-family: Quicksand, Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
 }

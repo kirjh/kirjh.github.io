@@ -5,7 +5,7 @@
   grid-column-start: 1;
   grid-row-start: 2;
 
-  background-color: var(--light_menu);
+  background-color: transparent;
   font-size: 1.7em;
 
   border-radius: 1.5em;
@@ -19,27 +19,38 @@
   padding: 0 0.5em;
   text-decoration: none;
   font-size: 1em;
+  transition: all 0.5s;
 }
 .navbar a,
 .navbar a:after {
+  color: var(--light_sub_font);
+}
+.navbar.pinned {
+  font-size: 1.2em;
+  background-color: var(--light_menu);
+}
+.navbar.pinned a,
+.navbar.pinned a:after {
+  color: var(--light_menu_font);
+}
+.navbar a:hover {
+  text-decoration: none;
   color: var(--light_font);
 }
 
-.navbar.pinned {
-  font-size: 1.2em;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-  color:aqua;
-}
-
 @media (prefers-color-scheme: dark) {
-  .navbar {
-    background-color: var(--dark_menu);
-  }
   .navbar a,
   .navbar a:after {
+    color: var(--dark_sub_font);
+  }
+  .navbar.pinned {
+    background-color: var(--dark_menu);
+  }
+  .navbar.pinned a,
+  .navbar.pinned a:after {
+    color: var(--dark_menu_font);
+  }
+  .navbar a:hover {
     color: var(--dark_font);
   }
 }
