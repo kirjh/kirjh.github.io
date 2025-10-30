@@ -4,15 +4,27 @@
   display: flex;
 }
 
-.d {
+#about div {
   margin: 2em;
   padding: 1em;
-  background-color:aquamarine;
+  color: white;
   border-radius: 1.5em;
 }
 
-@media (orientation: portrait) or (max-width: 1080px) {
-  #about {
+#about #about-1 {
+ margin-bottom: 10em;
+ text-align: right;
+}
 
+#about #about-2 {
+  margin-top: 10em;
+}
+
+@media (orientation: portrait) or (max-width: 1080px) {
+  #about #about-1,
+  #about #about-2 {
+    margin: 0 2em;
+    text-align: left;
   }
+
 }
