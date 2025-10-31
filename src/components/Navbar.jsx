@@ -1,4 +1,5 @@
 import '../styles/navbar.css'
+import {useEffect} from 'react';
 
 function Navbar() {
   function goto(href) {
@@ -12,7 +13,23 @@ function Navbar() {
     menu.classList.toggle("show");
     document.querySelector("button").innerHTML = menu.classList.contains("show") ? "Close" : "Menu";
   }
-  
+
+  function closeMenu(e) {
+    const items = document.querySelectorAll(".navbar button, #menu a")
+    for (const item of items) {
+      if (item == e.target) return;
+    }
+    document.querySelector("#menu").classList.remove("show");
+    document.querySelector("button").innerHTML = "Menu";
+  }
+
+  useEffect(() => {
+    window.addEventListener('click', closeMenu);
+    return () => {
+      window.removeEventListener('click', (e) => {closeMenu(e)});
+    }
+  }, []);
+
   return (
     <>
       <div className="navbar">
