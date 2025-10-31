@@ -23,14 +23,29 @@
   color: var(--light_font);
 }
 
+.footer {
+  margin: 1em auto 0;
+  padding: 0.5em 1em;
+  max-width: 1440p;
+
+  border-radius: 1.5em 1.5em 0 0;
+  text-align: right;
+  
+  color: var(--dark_font);
+  background-color: var(--light_menu);
+}
+
 @media (prefers-color-scheme: dark) {
   .contact-card a,
   .contact-card a:after {
     color: var(--dark_sub_font);
     text-decoration: none;
   }
-
   .contact-card a:hover {
     color: var(--dark_font);
+  }
+  .footer {
+    color: var(--light_font);
+    background-color: var(--dark_menu);
   }
 }

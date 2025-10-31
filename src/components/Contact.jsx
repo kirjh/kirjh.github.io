@@ -5,6 +5,8 @@ import emailLogo from '../assets/email.svg';
 import githubLogo from '../assets/github.svg';
 import linkedinLogo from '../assets/linkedin.svg';
 
+import {useState, useEffect} from 'react';
+
 
 function ContactCard({src, alt, href, text}) {
   return (
@@ -20,6 +22,11 @@ function ContactCard({src, alt, href, text}) {
 }
 
 function Contact() {
+  const [year, setYear] = useState(0)
+  useEffect(() => {
+    const date = new Date();
+    setYear(date.getFullYear());
+  });
   return (
     <>
       <div id="contact" className="container">
@@ -33,7 +40,7 @@ function Contact() {
           <ContactCard src={linkedinLogo} href="https://linkedin.com" text="Linkedin" alt="Link to Linkedin website."/>
         </div>
         <div className="footer">
-          
+          ©{year} Powered by dreams.
         </div>
       </div>
     </>
