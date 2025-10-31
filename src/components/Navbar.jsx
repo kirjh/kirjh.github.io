@@ -1,14 +1,17 @@
 import './navbar.css'
 
 function Navbar() {
+  function goto(href) {
+    document.querySelector(href).scrollIntoView();
+  }
   
   return (
     <>
       <div className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a onClick={()=> goto("#home")}>Home</a>
+        <a onClick={()=> goto("#about")}>About</a>
+        <a onClick={()=> goto("#projects")}>Projects</a>
+        <a onClick={()=> goto("#contact")}>Contact</a>
       </div>
       <div className="navbar-spacer"></div>
     </>
