@@ -1,14 +1,19 @@
 import '../styles/contact.css'
 import '../styles/index.css'
 
-import '../assets/react.svg';
+import emailLogo from '../assets/email.svg';
+import githubLogo from '../assets/github.svg';
+import linkedinLogo from '../assets/linkedin.svg';
 
 
-function ContactCard() {
+function ContactCard({src, alt, href, text}) {
   return (
     <>
-      <div>
-
+      <div className="contact-card">
+        <a href={href} target="_blank">
+          <img src={src} alt={alt} className="svg-icon"/>
+          <span>{text}</span>
+        </a>
       </div>
     </>
   )
@@ -21,6 +26,11 @@ function Contact() {
         <div className="header">
           <h1>Contact me</h1>
           <p className="subtext">Let's get down to business.</p>
+        </div>
+        <div className="contact-card-container">
+          <ContactCard src={emailLogo} href="https://github.com" text="Email" alt="Send an email to me."/>
+          <ContactCard src={githubLogo} href="https://github.com" text="Github" alt="Link to Github website."/>
+          <ContactCard src={linkedinLogo} href="https://linkedin.com" text="Linkedin" alt="Link to Linkedin website."/>
         </div>
       </div>
     </>

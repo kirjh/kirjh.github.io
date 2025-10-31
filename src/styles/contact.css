@@ -1,0 +1,36 @@
+.contact-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  display: block;
+  text-align: center;
+
+  width: min-content;
+
+  padding: 1em;
+}
+
+.contact-card a,
+.contact-card a:after {
+  color: var(--light_sub_font);
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.contact-card a:hover {
+  color: var(--light_font);
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-card a,
+  .contact-card a:after {
+    color: var(--dark_sub_font);
+    text-decoration: none;
+  }
+
+  .contact-card a:hover {
+    color: var(--dark_font);
+  }
+}

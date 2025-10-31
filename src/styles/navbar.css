@@ -34,6 +34,11 @@
 .navbar a:after {
   color: var(--light_sub_font);
 }
+.navbar a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--light_font);
+}
 .navbar.pinned {
   font-size: 1.2em;
   background-color: var(--light_menu);
@@ -42,16 +47,17 @@
 .navbar.pinned a:after {
   color: var(--light_menu_font);
 }
-.navbar a:hover {
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--light_font);
+.navbar.pinned a:hover {
+  color: var(--dark_font);
 }
 
 @media (prefers-color-scheme: dark) {
   .navbar a,
   .navbar a:after {
     color: var(--dark_sub_font);
+  }
+  .navbar a:hover {
+    color: var(--dark_font);
   }
   .navbar.pinned {
     background-color: var(--dark_menu);
@@ -60,7 +66,7 @@
   .navbar.pinned a:after {
     color: var(--dark_menu_font);
   }
-  .navbar a:hover {
-    color: var(--dark_font);
-  }
+  .navbar.pinned a:hover {
+  color: var(--light_font);
+}
 }
