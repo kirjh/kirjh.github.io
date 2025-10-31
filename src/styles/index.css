@@ -76,7 +76,4 @@ body {
     width: auto;
     flex-direction: column;
   }
-  .header {
-    text-align: left;
-  }
 }

@@ -32,6 +32,9 @@ function Contact() {
           <ContactCard src={githubLogo} href="https://github.com" text="Github" alt="Link to Github website."/>
           <ContactCard src={linkedinLogo} href="https://linkedin.com" text="Linkedin" alt="Link to Linkedin website."/>
         </div>
+        <div className="footer">
+          
+        </div>
       </div>
     </>
   )
