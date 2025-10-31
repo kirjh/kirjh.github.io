@@ -15,7 +15,7 @@ function Navbar() {
   }
 
   function closeMenu(e) {
-    const items = document.querySelectorAll(".navbar button, #menu a")
+    const items = document.querySelectorAll(".navbar button, #menu a");
     for (const item of items) {
       if (item == e.target) return;
     }

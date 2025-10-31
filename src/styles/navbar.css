@@ -55,6 +55,7 @@ button:hover {
 .navbar.pinned {
   font-size: 1.2em;
   background-color: var(--light_menu);
+  filter: drop-shadow(0 0.5em 0.75em var(--light_bg));
 }
 .navbar.pinned a,
 .navbar.pinned a:after,
@@ -67,6 +68,9 @@ button:hover {
 }
 
 @media (prefers-color-scheme: dark) {
+  .navbar.pinned {
+    filter: drop-shadow(0 0.5em 0.75em var(--dark_bg));
+  }
   .navbar a,
   .navbar a:after,
   button {
