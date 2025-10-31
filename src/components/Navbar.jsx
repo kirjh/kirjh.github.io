@@ -33,7 +33,7 @@ function Navbar() {
   return (
     <>
       <div className="navbar">
-        <button onClick={()=> openMenu()}>Menu</button>
+        <button type="button" onClick={()=> openMenu()}>Menu</button>
         <div id="menu">
           <a onClick={()=> goto("#home")}>Home</a>
           <a onClick={()=> goto("#about")}>About</a>

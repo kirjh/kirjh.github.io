@@ -34,12 +34,13 @@ body {
 
 .header {
   padding: 1em 1em;
-  margin: 3em 2em 0;
+  margin: 2em 2em 0;
   text-align: center;
 }
 
 .container,
 .flex-container {
+  margin: 1em 0;
   box-sizing: border-box;
   width: 80%;
   max-width: 1440px;
