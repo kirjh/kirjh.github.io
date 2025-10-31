@@ -26,7 +26,7 @@ function Contact() {
   useEffect(() => {
     const date = new Date();
     setYear(date.getFullYear());
-  });
+  }, []);
   return (
     <>
       <div id="contact" className="container">
