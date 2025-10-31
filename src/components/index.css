@@ -2,14 +2,14 @@
   --light_bg: #fff;
   --light_font: #000;
   --light_menu: #999;
-  --light_sub_font: #999;
+  --light_sub_font: #777;
   --light_menu_font: #fff;
 
   --dark_bg: #242424;
   --dark_font: #fff;
   --dark_menu: #111;
-  --dark_sub_font: #777;
-  --dark_menu_font: #777;
+  --dark_sub_font: #888;
+  --dark_menu_font: #888;
 
   font-family: Quicksand, Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
 }
@@ -28,20 +28,14 @@ body {
   color: var(--light_font);
 }
 
-.sub-font {
+.subtext {
   color: var(--light_sub_font);
 }
 
-@media (prefers-color-scheme: dark) {
-  #root,
-  html,
-  body {
-    background-color: var(--dark_bg);
-    color: var(--dark_font);
-  }
-  .sub-font {
-    color: var(--dark_sub_font);
-  }
+.header {
+  padding: 1em 1em;
+  margin: 3em 2em;
+  text-align: center;
 }
 
 .container,
@@ -55,6 +49,18 @@ body {
   flex-direction: row;
 }
 
+@media (prefers-color-scheme: dark) {
+  #root,
+  html,
+  body {
+    background-color: var(--dark_bg);
+    color: var(--dark_font);
+  }
+  .subtext {
+    color: var(--dark_sub_font);
+  }
+}
+
 @media (orientation: portrait) or (max-width: 1080px) {
   .container {
     width: 100%;
@@ -62,5 +68,8 @@ body {
   .flex-container {
     width: auto;
     flex-direction: column;
+  }
+  .header {
+    text-align: left;
   }
 }
