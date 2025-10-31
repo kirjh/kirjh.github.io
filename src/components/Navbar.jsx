@@ -1,4 +1,4 @@
-import './navbar.css'
+import '../styles/navbar.css'
 
 function Navbar() {
   function goto(href) {

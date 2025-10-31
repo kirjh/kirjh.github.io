@@ -4,7 +4,7 @@ import Navbar from './Navbar.jsx'
 import About from './About.jsx'
 import Projects from './Projects.jsx'
 import Contact from './Contact.jsx'
-import './App.css'
+import '../styles/App.css'
 
 function Home() {
   const [count, setCount] = useState(0)

@@ -1,5 +1,5 @@
-import './Splash.css'
-import './index.css'
+import '../styles/Splash.css'
+import '../styles/index.css'
 import {useRef, useEffect} from 'react'
 
 function Border() {

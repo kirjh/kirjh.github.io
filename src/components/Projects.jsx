@@ -1,5 +1,5 @@
-import './projects.css'
-import './index.css'
+import '../styles/projects.css'
+import '../styles/index.css'
 
 function Projects() {
   return (

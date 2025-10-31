@@ -1,5 +1,18 @@
-import './contact.css'
-import './index.css'
+import '../styles/contact.css'
+import '../styles/index.css'
+
+import '../assets/react.svg';
+
+
+function ContactCard() {
+  return (
+    <>
+      <div>
+
+      </div>
+    </>
+  )
+}
 
 function Contact() {
   return (
