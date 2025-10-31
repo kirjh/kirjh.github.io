@@ -5,10 +5,10 @@ import {useRef, useEffect} from 'react'
 function Border() {
   return (
     <>
-      <svg className="splash splashborder"
+      <svg className="splash splash-border"
         viewBox="0 0 13.758332 6.8791665"
         version="1.1"
-        id="svg1"
+        id="splash-border-svg"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg">
         <defs
@@ -32,6 +32,7 @@ function Splash() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
+      console.log(entry.intersectionRatio)
       document.querySelector(".navbar").classList.toggle("pinned", !(entry.intersectionRatio > 0));
     }, {threshold: [0, 0.5, 1]});
 
@@ -46,7 +47,7 @@ function Splash() {
   return (
     <>
       <div className="spacer"></div>
-      <div className="splash-container container" id="home" ref={ref}>
+      <div className="splash-container" id="home" ref={ref}>
         <div className="splash splash-1"></div>
         <div className="splash splash-2"></div>
         <div className="splash splash-3"></div>

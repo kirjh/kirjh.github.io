@@ -7,6 +7,8 @@
 .splash-container {
   grid-column-start: 1;
   grid-row-start: 1;
+
+  width: 80%;
   max-width: 1440px;
 
   background-color: #5D6091;
@@ -19,7 +21,7 @@
   position: absolute;
 }
 
-.splashborder {
+.splash-border {
   width: calc(100% * 54/52);
   left: calc(100% * -1/52);
   bottom: calc(100% * -1/104);
@@ -32,16 +34,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .splashborder {
+  .splash-border {
     color: var(--dark_bg);
   }
 }
-/*
-.splashflex-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 
-  align-items: center;
-  width: 100%
-}*/
+@media (orientation: portrait) or (max-width: 1080px) {
+  .splash-container {
+    width: 100%;
+  }
+}

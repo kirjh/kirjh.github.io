@@ -1,0 +1,11 @@
+#projects .header {
+  padding: 1em 1em;
+  margin: 3em 2em;
+  text-align: center;
+}
+
+@media (orientation: portrait) or (max-width: 1080px) {
+  #projects .header {
+    text-align: left;
+  }
+}

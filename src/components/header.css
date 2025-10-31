@@ -4,7 +4,6 @@ div {
 
 .header-main {
   z-index: 1;
-  color: var(--light_font);
 }
 
 .header-sub {
@@ -18,9 +17,6 @@ div {
 }
 
 @media (prefers-color-scheme: dark) {
-  .header-main {
-    color: var(--dark_font);
-  }
   .header-sub {
     color: var(--dark_sub_font);
   }

@@ -25,19 +25,32 @@ body {
 
   width: 100%;
   background-color: var(--light_bg);
+  color: var(--light_font);
+}
+
+.sub-font {
+  color: var(--light_sub_font);
 }
 
 @media (prefers-color-scheme: dark) {
-  #root {
+  #root,
+  html,
+  body {
     background-color: var(--dark_bg);
+    color: var(--dark_font);
+  }
+  .sub-font {
+    color: var(--dark_sub_font);
   }
 }
 
-.container {
+.container,
+.flex-container {
+  box-sizing: border-box;
   width: 80%;
+  max-width: 1440px;
 }
 .flex-container {
-  width: 80%;
   display: flex;
   flex-direction: row;
 }
