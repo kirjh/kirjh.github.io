@@ -1,14 +1,14 @@
 #about {
   max-width: 1440px;
-  padding: 3em 0.5em;
-  display: flex;
+  padding: 2em 0.5em;
 }
 
 #about div {
-  margin: 2em;
+  margin: 1em 2em;
   padding: 1em;
-  color: white;
+  color: var(--light_font);
   border-radius: 1.5em;
+  flex: 0 1 50%;
 }
 
 #about #about-1 {
@@ -20,11 +20,16 @@
   margin-top: 10em;
 }
 
+@media (prefers-color-scheme: dark) {
+  #about div {
+    color: var(--dark_font);
+  }
+}
+
 @media (orientation: portrait) or (max-width: 1080px) {
   #about #about-1,
   #about #about-2 {
     margin: 0 2em;
     text-align: left;
   }
-
 }

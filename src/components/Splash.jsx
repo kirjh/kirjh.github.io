@@ -33,7 +33,7 @@ function Splash() {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       document.querySelector(".navbar").classList.toggle("pinned", !(entry.intersectionRatio > 0));
-    }, {threshold: 0});
+    }, {threshold: [0, 0.5, 1]});
 
     if (ref.current) {
       observer.observe(ref.current);
