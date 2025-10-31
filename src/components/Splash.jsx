@@ -32,7 +32,6 @@ function Splash() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      console.log(entry.intersectionRatio)
       document.querySelector(".navbar").classList.toggle("pinned", !(entry.intersectionRatio > 0));
     }, {threshold: [0, 0.5, 1]});
 
