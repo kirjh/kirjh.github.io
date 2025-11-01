@@ -7,20 +7,43 @@ import rotypeData from '../projects/rotype.json'
 
 function Card({jsonData}) {
   // Construct images for carousel
-  const listItems = Object.keys(jsonData.images).map((img) => { 
+  const keys = Object.keys(jsonData.images);
+  const listItems = keys.map((img) => { 
     return (
       <li className="image" key={img}>
         <img src={jsonData.images[img].src} alt={jsonData.images[img].alt} />
       </li>
     )
   });
+  // construct scroll-markers
+  const buttons = keys.map((img) => {
+    return (
+      <a key={img} className="scroll-marker"></a>
+    )
+  });
+
+  useEffect(() => {
+    const images = document.querySelectorAll(`#${jsonData.id} li`)
+    const buttons = document.querySelectorAll(`#${jsonData.id} .scroll-marker-container a`)
+
+    for (let i = 0; i < images.length; i++) {
+      buttons[i].onclick = () => {
+        images[i].scrollIntoView({block: 'nearest'});
+      }
+    }
+  }, [])
 
   return (
     <>
-      <div className="card">
-        <ul className="gallery-container"> 
-          {listItems}
-        </ul>
+      <div className="card" id={jsonData.id}>
+        <div className="gallery-container">
+          <ul className="carousel"> 
+            {listItems}
+          </ul>
+          <div className="scroll-marker-container">
+            {buttons}
+          </div>
+        </div>
         <h1>{jsonData.name}</h1>
         <p className="subtext">{jsonData.subtext}</p>
         <a className="link" href={jsonData.url} target="_blank">{jsonData.url}</a>

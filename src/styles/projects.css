@@ -28,6 +28,11 @@
 }
 
 .gallery-container {
+  position: relative;
+  margin: 0 0 3em;
+}
+
+.carousel {
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
@@ -35,13 +40,32 @@
   scrollbar-width: none;
 
   padding: 0;
-  margin: 0 0 3em;
+  margin: 0;
   border-radius: 1em;
   gap: 1em;
 
-  anchor-name: --my-carousel;
-  scroll-marker-group: after;
+  /*anchor-name: --my-carousel;
+  scroll-marker-group: after;*/
 }
+
+.scroll-marker-container {
+  position: absolute;
+  bottom: -2em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.scroll-marker {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-color: var(--light_menu_font);
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*
 .gallery-container::scroll-marker-group {
   position: absolute;
   position-anchor: --my-carousel;
@@ -63,7 +87,7 @@
 
 .image::scroll-marker:target-current {
   background-color: var(--light_font);
-}
+}*/
 
 .image {
   display: flex;
