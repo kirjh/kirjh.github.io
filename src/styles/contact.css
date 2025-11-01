@@ -1,18 +1,26 @@
 #contact {
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#contact.header {
+  flex: 1 0 auto;
 }
 
 .contact-card-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  margin-bottom: 20vh;
 }
 
 .contact-card {
   display: block;
   text-align: center;
-
   width: min-content;
-
   padding: 1em;
 }
 
@@ -28,7 +36,7 @@
 }
 
 .footer {
-  margin: 15em auto 0;
+  margin: 1em 0 0;
   padding: 0.5em 1.5em;
   max-width: 1440p;
 
