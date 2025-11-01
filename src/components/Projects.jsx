@@ -1,7 +1,37 @@
 import '../styles/projects.css'
 import '../styles/index.css'
 
+import {useEffect} from 'react'
+
+function Card() {
+  return (
+    <>
+      <div className="card">
+
+      </div>
+    </>
+  )
+}
+
 function Projects() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {threshold: [0]});
+    
+    document.querySelectorAll(".card").forEach((card)=> {
+      observer.observe(card);
+    })
+
+    return () => {
+      observer.disconnect();
+    }
+  }, []);
+
   return (
     <>
       <div id="projects" className="container">
@@ -10,14 +40,10 @@ function Projects() {
           <p className="subtext">A curated list of some things I've made.</p>
         </div>
         <div className="card-container">
-          <div className="card">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ex viverra, lobortis massa id, commodo ante. Morbi ullamcorper lorem vitae orci eleifend commodo. Suspendisse vel justo egestas, elementum dui vel, luctus mauris. Nulla lobortis ornare ante, ac faucibus ipsum sodales ut. Donec semper, nisl congue pellentesque sollicitudin, lorem quam fringilla massa, vitae egestas lacus eros condimentum mi. Nunc ligula purus, ornare eget nibh nec, efficitur luctus est. Suspendisse vel nisl ornare, porta libero sit amet, volutpat sem. Nulla facilisi. In vel eros id dui placerat aliquet sed id tellus. Mauris lacinia lacus nec interdum interdum. Nunc sed auctor purus. Integer a nunc placerat, semper odio porttitor, ultrices justo. Maecenas turpis mauris, dapibus vitae augue in, pulvinar ullamcorper sapien.
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ex viverra, lobortis massa id, commodo ante. Morbi ullamcorper lorem vitae orci eleifend commodo. Suspendisse vel justo egestas, elementum dui vel, luctus mauris. Nulla lobortis ornare ante, ac faucibus ipsum sodales ut. Donec semper, nisl congue pellentesque sollicitudin, lorem quam fringilla massa, vitae egestas lacus eros condimentum mi. Nunc ligula purus, ornare eget nibh nec, efficitur luctus est. Suspendisse vel nisl ornare, porta libero sit amet, volutpat sem. Nulla facilisi. In vel eros id dui placerat aliquet sed id tellus. Mauris lacinia lacus nec interdum interdum. Nunc sed auctor purus. Integer a nunc placerat, semper odio porttitor, ultrices justo. Maecenas turpis mauris, dapibus vitae augue in, pulvinar ullamcorper sapien.
-          </div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </>

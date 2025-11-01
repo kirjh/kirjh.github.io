@@ -6,12 +6,36 @@
 }
 
 .card {
-  height: auto;
+  position: relative;
+  height: 40em;
   padding: 1.5em;
   margin: 1em;
 
   border-radius: 2em;
   background-color: #ddd;
+
+  opacity: 0;
+}
+
+.card:nth-child(even) {
+  animation-delay: 0.25s;
+}
+
+.card.show {
+  animation-name: slideCard;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideCard {
+  0% {
+    opacity: 0;
+    top: 10em;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +46,10 @@
 
 @media (orientation: portrait) or (max-width: 1080px) {
   .card {
-    margin: 1em 2em;
+    margin: 1em 0em;
+  }
+  .card:nth-child(even) {
+    transition-delay: 0;
   }
   .card-container {
     grid-template-columns: 1fr;

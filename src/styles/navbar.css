@@ -12,7 +12,7 @@
   font-size: 1.7em;
 
   border-radius: 1.5em;
-  margin: 1.5em 0;
+  margin: 0.5em 0;
   padding: 0.5em 1em;
   height: min-content;
 
@@ -23,7 +23,7 @@
   grid-column-start: 1;
   grid-row-start: 2;
   font-size: 1.7em;
-  height: 6em;
+  height: 4em;
   width: 1em;
 }
 
@@ -69,7 +69,7 @@ button:hover {
 
 @media (prefers-color-scheme: dark) {
   .navbar.pinned {
-    filter: drop-shadow(0 0.5em 0.75em #111);
+    filter: drop-shadow(0 0.5em 0.75em var(--dark_bg));
   }
   .navbar a,
   .navbar a:after,
@@ -97,7 +97,10 @@ button:hover {
 @media (orientation: portrait) or (max-width: 1080px) {
   .navbar {
     flex-direction: column-reverse;
-    margin-bottom: 2em;
+    margin: 1.5em 0;
+  }
+  .navbar-spacer {
+    height: 7em;
   }
   .navbar.pinned {
     flex-direction: column;

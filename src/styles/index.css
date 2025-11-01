@@ -1,7 +1,7 @@
 :root {
   --light_bg: #fff;
   --light_font: #000;
-  --light_menu: #000;
+  --light_menu: #242424;
   --light_sub_font: #777;
   --light_menu_font: #aaa;
 
@@ -52,6 +52,7 @@ body {
 
 .svg-icon {
   height: 4em;
+  filter: invert(14%);
 }
 
 @media (prefers-color-scheme: dark) {
