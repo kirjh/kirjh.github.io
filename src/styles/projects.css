@@ -31,12 +31,38 @@
   display: flex;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   scrollbar-width: none;
 
   padding: 0;
-  margin-top: 0;
+  margin: 0 0 3em;
   border-radius: 1em;
   gap: 1em;
+
+  anchor-name: --my-carousel;
+  scroll-marker-group: after;
+}
+.gallery-container::scroll-marker-group {
+  position: absolute;
+  position-anchor: --my-carousel;
+  bottom: calc(anchor(bottom) - 2em);
+  justify-self: anchor-center;
+
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.image::scroll-marker {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-color: var(--light_menu_font);
+  border-radius: 50%;
+}
+
+.image::scroll-marker:target-current {
+  background-color: var(--light_font);
 }
 
 .image {
@@ -71,6 +97,13 @@
 @media (prefers-color-scheme: dark) {
   .card {
     background-color: var(--dark_alt_bg);
+  }
+  .image::scroll-marker {
+    background-color: var(--dark_menu_font);
+  }
+
+  .image::scroll-marker:target-current {
+    background-color: var(--dark_font);
   }
 }
 
