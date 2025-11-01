@@ -27,17 +27,6 @@
   padding: 1em;
 }
 
-.contact-card a,
-.contact-card a:after {
-  color: var(--light_link);
-  text-decoration: none;
-  transition: all 0.5s;
-}
-
-.contact-card a:hover {
-  color: var(--light_font);
-}
-
 .footer {
   margin: 1em 0 0;
   padding: 0.5em 1.5em;
@@ -60,13 +49,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .contact-card a,
-  .contact-card a:after {
-    color: var(--dark_link);
-  }
-  .contact-card a:hover {
-    color: var(--dark_font);
-  }
   .footer {
     color: var(--light_font);
     background-color: var(--dark_menu);

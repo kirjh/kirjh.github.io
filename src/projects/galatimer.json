@@ -1,11 +1,11 @@
 {
   "name": "Gala Study Timer",
-  "subtext": "A study timer built into your browser",
+  "subtext": "A study timer built into your browser.",
 
   "url": "https://github.com/kirjh/galatimer",
 
-  "description": "",
-  "stack": "",
+  "description": "A browser extension built with Manifist V3. Functionalities include customizable timers that automatically change modes, an integrated to-do list, and progress tracking. Released in December 2024 and enjoys a steady userbase of 100 people.",
+  "stack": "Javascript, HTML, CSS",
 
   "images": {
     "0": {

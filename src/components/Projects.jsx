@@ -20,6 +20,11 @@ function Card({jsonData}) {
         <ul className="gallery-container"> 
           {listItems}
         </ul>
+        <h1>{jsonData.name}</h1>
+        <p className="subtext">{jsonData.subtext}</p>
+        <a className="link" href={jsonData.url}>{jsonData.url}</a>
+        <p style={{textAlign: "center"}}>{jsonData.description}</p>
+        <p>Tech stack: <span className="subtext">{jsonData.stack}</span></p>
       </div>
     </>
   )

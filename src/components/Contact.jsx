@@ -12,7 +12,7 @@ function ContactCard({src, alt, href, text}) {
   return (
     <>
       <div className="contact-card">
-        <a href={href} target="_blank">
+        <a className="link" href={href} target="_blank">
           <img src={src} alt={alt} className="svg-icon"/>
           <span>{text}</span>
         </a>

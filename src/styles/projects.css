@@ -7,9 +7,9 @@
 
 .card {
   position: relative;
-  height: 40em;
   padding: 1.5em;
   margin: 1em;
+  text-align: center;
 
   border-radius: 2em;
   background-color: var(--light_alt_bg);

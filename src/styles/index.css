@@ -59,6 +59,17 @@ body {
   filter: invert(14%);
 }
 
+.link,
+.link:after {
+  color: var(--light_link);
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  color: var(--light_font);
+}
+
 @media (prefers-color-scheme: dark) {
   #root,
   html,
@@ -71,6 +82,13 @@ body {
   }
   .svg-icon {
     filter: invert(100%);
+  }
+  .link,
+  .link:after {
+    color: var(--dark_link);
+  }
+  .link:hover {
+    color: var(--dark_font);
   }
 }
 
