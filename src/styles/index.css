@@ -5,6 +5,7 @@
   --light_menu: #242424;
   --light_sub_font: #666;
   --light_menu_font: #aaa;
+  --light_link: #014dbe;
 
   --dark_bg: #242424;
   --dark_alt_bg: #333;
@@ -12,6 +13,7 @@
   --dark_menu: #fff;
   --dark_sub_font: #888;
   --dark_menu_font: #666;
+  --dark_link: #66adff;
 
   font-family: Quicksand, Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
 }
