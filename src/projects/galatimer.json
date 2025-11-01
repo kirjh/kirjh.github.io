@@ -1,0 +1,24 @@
+{
+  "name": "Gala Study Timer",
+  "subtext": "A study timer built into your browser",
+
+  "url": "https://github.com/kirjh/galatimer",
+
+  "description": "",
+  "stack": "",
+
+  "images": {
+    "0": {
+      "src": "/galatimer/timer_focus.png",
+      "alt": "A screenshot of the timer in use, showing 20 minutes remaining."
+    },
+    "1": {
+      "src": "/galatimer/timer_short.png",
+      "alt": "A screenshot of the timer in use, showing 7 minutes remaining. A side tab is open showing two tasks, one complete and one incomplete."
+    },
+    "2": {
+      "src": "/galatimer/timer_long.png",
+      "alt": "A screenshot of the timer. A side tab is open showing various settings for configuring the timer."
+    }
+  }
+}

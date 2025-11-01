@@ -2,14 +2,24 @@ import '../styles/projects.css'
 import '../styles/index.css'
 
 import {useEffect} from 'react'
+import galaData from '../projects/galatimer.json'
 
-function Card() {
+function Card({jsonData}) {
+  // Construct images for carousel
+  const listItems = Object.keys(jsonData.images).map((img) => { 
+    return (
+      <li className="image" key={img}>
+        <img src={jsonData.images[img].src} alt={jsonData.images[img].alt} />
+      </li>
+    )
+  });
+
   return (
     <>
       <div className="card">
-        <div className="gallery-container">
-          
-        </div>
+        <ul className="gallery-container"> 
+          {listItems}
+        </ul>
       </div>
     </>
   )
@@ -42,10 +52,7 @@ function Projects() {
           <p className="subtext">A curated list of some things I've made.</p>
         </div>
         <div className="card-container">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card jsonData={galaData}/>
         </div>
       </div>
     </>

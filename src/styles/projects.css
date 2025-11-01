@@ -27,6 +27,36 @@
   animation-fill-mode: forwards;
 }
 
+.gallery-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  padding: 0;
+  margin-top: 0;
+  border-radius: 1em;
+  gap: 1em;
+}
+
+.image {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: center;
+
+  list-style-type: none;
+  scroll-snap-align: center;
+  
+  background-color: #111;
+  border-radius: 1em;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.image img {
+  width: 100%;
+}
+
 @keyframes slideCard {
   0% {
     opacity: 0;
