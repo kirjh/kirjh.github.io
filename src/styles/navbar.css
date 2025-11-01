@@ -38,7 +38,7 @@ button {
 button {
   padding: 0 0.5em;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
   transition: all 0.5s;
 }
 .navbar a,

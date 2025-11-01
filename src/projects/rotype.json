@@ -1,11 +1,11 @@
 {
   "id": "rotype",
   "name": "RoType AI",
-  "subtext": "AI assisted typing test",
+  "subtext": "An AI assisted typing test.",
 
   "url": "https://github.com/kirjh/galatimer",
 
-  "description": "A typing test website.",
+  "description": "A typing test website that tracks skill heuristics and formulates informed suggestions for improvement with the help of Gemini AI. Features standard typing test functions and an assistive chatbot. 2025 team project.",
   "stack": "ReactJS, HTML, Tailwind, Gemini AI",
 
   "images": {

@@ -11,7 +11,8 @@
   width: 80%;
   max-width: 1440px;
 
-  background-color: #5D6091;
+  background-image: linear-gradient(to bottom, #524c93, #a97a58);
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }

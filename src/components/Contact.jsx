@@ -43,7 +43,7 @@ function Contact() {
           <p className="subtext">Click any link above to get started.</p>
         </div>
         <div className="footer">
-          ©{year} Powered by dreams.
+          <p style={{margin: 0}}>©{year} Powered by dreams.</p>
         </div>
       </div>
     </>

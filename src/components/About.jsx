@@ -12,7 +12,7 @@ function About() {
         </div>
         <div id="about-2">
           <h1>What I do</h1>
-          <p className="subtext">Lots of little things.</p>
+          <p className="subtext">A lot of little things.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>

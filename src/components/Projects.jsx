@@ -2,8 +2,10 @@ import '../styles/projects.css'
 import '../styles/index.css'
 
 import {useEffect} from 'react'
-import galaData from '../projects/galatimer.json'
-import rotypeData from '../projects/rotype.json'
+import galaData from '../projects/galatimer.json' with {type: 'json'}
+import coinData from '../projects/coinanalyzer.json' with {type: 'json'}
+import rotypeData from '../projects/rotype.json' with {type: 'json'}
+import templateData from '../projects/card-template.json' with {type: 'json'}
 
 function Card({jsonData}) {
   // Construct images for carousel
@@ -45,10 +47,10 @@ function Card({jsonData}) {
           </div>
         </div>
         <h1>{jsonData.name}</h1>
-        <p className="subtext">{jsonData.subtext}</p>
+        <p className="subtext" style={{marginTop: 0}}>{jsonData.subtext}</p>
         <a className="link" href={jsonData.url} target="_blank">{jsonData.url}</a>
         <p>{jsonData.description}</p>
-        <p style={{marginTop: "auto"}}>Tech stack: <span className="subtext">{jsonData.stack}</span></p>
+        <p className="stack">Tech stack: <span className="subtext">{jsonData.stack}</span></p>
       </div>
     </>
   )
@@ -97,7 +99,9 @@ function Projects() {
         </div>
         <div className="card-container">
           <Card jsonData={galaData}/>
+          <Card jsonData={coinData}/>
           <Card jsonData={rotypeData}/>
+          <Card jsonData={templateData}/>
         </div>
       </div>
     </>

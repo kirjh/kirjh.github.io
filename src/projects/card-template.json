@@ -1,0 +1,25 @@
+{
+  "id": "default",
+  "name": "Template",
+  "subtext": "Hello World!",
+
+  "url": "https://github.com/",
+
+  "description": "Description.",
+  "stack": "Default",
+
+  "images": {
+    "0": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    },
+    "1": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    },
+    "2": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    }
+  }
+}
