@@ -5,10 +5,6 @@
   height: 100vh;
 }
 
-#contact.header {
-  flex: 1 0 auto;
-}
-
 .contact-card-container {
   display: flex;
   justify-content: center;
@@ -47,6 +43,14 @@
   background-color: var(--light_menu);
 }
 
+@media (min-height: 864px) {
+  #contact {
+    height: auto;
+  }
+  .contact-card-container {
+    margin-top: 5vh;
+  }
+}
 @media (prefers-color-scheme: dark) {
   .contact-card a,
   .contact-card a:after {

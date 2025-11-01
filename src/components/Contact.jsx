@@ -1,11 +1,11 @@
 import '../styles/contact.css'
 import '../styles/index.css'
 
-import emailLogo from '../assets/email.svg';
-import githubLogo from '../assets/github.svg';
-import linkedinLogo from '../assets/linkedin.svg';
+import emailLogo from '../assets/email.svg'
+import githubLogo from '../assets/github.svg'
+import linkedinLogo from '../assets/linkedin.svg'
 
-import {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react'
 
 
 function ContactCard({src, alt, href, text}) {
