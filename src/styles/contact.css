@@ -5,12 +5,19 @@
   height: 100vh;
 }
 
+.contact-body {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  
+  margin-bottom: 15vh;
+  text-align: center;
+}
+
 .contact-card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex: 1 0 auto;
-  margin-bottom: 20vh;
 }
 
 .contact-card {
@@ -47,10 +54,11 @@
   #contact {
     height: auto;
   }
-  .contact-card-container {
+  .contact-body {
     margin-top: 5vh;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   .contact-card a,
   .contact-card a:after {
