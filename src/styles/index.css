@@ -1,11 +1,13 @@
 :root {
-  --light_bg: #fff;
+  --light_bg: #dbdbdb;
+  --light_alt_bg: #eee;
   --light_font: #000;
   --light_menu: #242424;
-  --light_sub_font: #777;
+  --light_sub_font: #666;
   --light_menu_font: #aaa;
 
   --dark_bg: #242424;
+  --dark_alt_bg: #333;
   --dark_font: #fff;
   --dark_menu: #fff;
   --dark_sub_font: #888;

@@ -7,7 +7,9 @@ function Card() {
   return (
     <>
       <div className="card">
-
+        <div className="gallery-container">
+          
+        </div>
       </div>
     </>
   )

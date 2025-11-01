@@ -1,5 +1,5 @@
 import '../styles/navbar.css'
-import {useEffect} from 'react';
+import {useEffect} from 'react'
 
 function Navbar() {
   function goto(href) {
