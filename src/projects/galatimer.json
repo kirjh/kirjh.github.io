@@ -4,7 +4,7 @@
 
   "url": "https://github.com/kirjh/galatimer",
 
-  "description": "A browser extension built with Manifist V3. Functionalities include customizable timers that automatically change modes, an integrated to-do list, and progress tracking. Released in December 2024 and enjoys a steady userbase of 100 people.",
+  "description": "A browser extension built with Manifest V3. Functionalities include customizable timers that automatically change modes, an integrated to-do list, and progress tracking. Released in December 2024 and enjoys a steady userbase of 100 people.",
   "stack": "Javascript, HTML, CSS",
 
   "images": {
