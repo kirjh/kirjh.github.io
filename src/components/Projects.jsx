@@ -10,7 +10,7 @@ function Card({jsonData}) {
   const keys = Object.keys(jsonData.images);
   const listItems = keys.map((img) => { 
     return (
-      <li className="image" key={img}>
+      <li key={img} className="image" id={`${jsonData.id}${img}`}>
         <img src={jsonData.images[img].src} alt={jsonData.images[img].alt} />
       </li>
     )
@@ -18,7 +18,7 @@ function Card({jsonData}) {
   // construct scroll-markers
   const buttons = keys.map((img) => {
     return (
-      <a key={img} className="scroll-marker"></a>
+      <a key={img} className={`scroll-marker ${jsonData.id} ${img == 0 ? "active" : ""}`} id={`${jsonData.id}${img}marker`}></a>
     )
   });
 
@@ -47,8 +47,8 @@ function Card({jsonData}) {
         <h1>{jsonData.name}</h1>
         <p className="subtext">{jsonData.subtext}</p>
         <a className="link" href={jsonData.url} target="_blank">{jsonData.url}</a>
-        <p style={{textAlign: "center"}}>{jsonData.description}</p>
-        <p>Tech stack: <span className="subtext">{jsonData.stack}</span></p>
+        <p>{jsonData.description}</p>
+        <p style={{marginTop: "auto"}}>Tech stack: <span className="subtext">{jsonData.stack}</span></p>
       </div>
     </>
   )
@@ -56,20 +56,35 @@ function Card({jsonData}) {
 
 function Projects() {
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
+    const cardObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
           entry.target.classList.add("show");
         }
       });
     }, {threshold: [0]});
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio < 0.75) return;
+        const id = entry.target.id.substring(0, entry.target.id.length-1);
+        document.querySelectorAll(`a.${id}.active`).forEach((e) => {
+          e.classList.remove("active");
+        });
+        document.querySelector(`#${entry.target.id}marker`).classList.add("active");
+      });
+    }, {threshold: [0.75]});
     
     document.querySelectorAll(".card").forEach((card)=> {
-      observer.observe(card);
-    })
+      cardObserver.observe(card);
+    });
+
+    document.querySelectorAll(".card li").forEach((image)=> {
+      imageObserver.observe(image);
+    });
 
     return () => {
-      observer.disconnect();
+      cardObserver.disconnect();
+      imageObserver.disconnect();
     }
   }, []);
 

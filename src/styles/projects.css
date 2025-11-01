@@ -65,6 +65,9 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.scroll-marker.active {
+  background-color: var(--light_font);
+}
 /*
 .gallery-container::scroll-marker-group {
   position: absolute;
@@ -122,13 +125,19 @@
   .card {
     background-color: var(--dark_alt_bg);
   }
+  .scroll-marker {
+  background-color: var(--dark_menu_font);
+}
+.scroll-marker.active {
+  background-color: var(--dark_font);
+}
+  /*
   .image::scroll-marker {
     background-color: var(--dark_menu_font);
   }
-
   .image::scroll-marker:target-current {
     background-color: var(--dark_font);
-  }
+  }*/
 }
 
 @media (orientation: portrait) or (max-width: 1080px) {
