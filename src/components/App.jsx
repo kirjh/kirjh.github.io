@@ -16,7 +16,6 @@ function Home() {
       <About />
       <Projects />
       <Contact />
-      <div className="test"></div>
     </>
   )
 }

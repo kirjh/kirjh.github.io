@@ -23,7 +23,7 @@
   grid-column-start: 1;
   grid-row-start: 2;
   font-size: 1.7em;
-  height: 5em;
+  height: 6em;
   width: 1em;
 }
 
@@ -55,7 +55,7 @@ button:hover {
 .navbar.pinned {
   font-size: 1.2em;
   background-color: var(--light_menu);
-  filter: drop-shadow(0 0.5em 0.75em var(--light_bg));
+  filter: drop-shadow(0 0.5em 0.75em #777);
 }
 .navbar.pinned a,
 .navbar.pinned a:after,
@@ -69,7 +69,7 @@ button:hover {
 
 @media (prefers-color-scheme: dark) {
   .navbar.pinned {
-    filter: drop-shadow(0 0.5em 0.75em var(--dark_bg));
+    filter: drop-shadow(0 0.5em 0.75em #111);
   }
   .navbar a,
   .navbar a:after,

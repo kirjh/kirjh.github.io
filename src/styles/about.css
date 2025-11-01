@@ -1,7 +1,6 @@
 #about div {
-  margin: 2em;
+  margin: 3em 2em;
   padding: 1em;
-  border-radius: 1.5em;
   flex: 0 1 50%;
 }
 
@@ -10,7 +9,7 @@
 }
 
 #about #about-2 {
-  margin-top: 10em;
+  margin-top: 12em;
 }
 
 @media (prefers-color-scheme: dark) {
