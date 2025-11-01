@@ -1,0 +1,24 @@
+{
+  "name": "RoType AI",
+  "subtext": "AI assisted typing test",
+
+  "url": "https://github.com/kirjh/galatimer",
+
+  "description": "A typing test website.",
+  "stack": "ReactJS, HTML, Tailwind, Gemini AI",
+
+  "images": {
+    "0": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    },
+    "1": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    },
+    "2": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    }
+  }
+}

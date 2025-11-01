@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60"
+   height="45"
+   viewBox="0 0 15.875 11.90625"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#111111;stroke:none;stroke-width:0.731924;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1"
+       id="rect1"
+       width="15.875"
+       height="11.90625"
+       x="0"
+       y="0"
+       ry="0.56075394" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.26458333;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect2"
+       width="4.5891943"
+       height="4.5891943"
+       x="5.6429029"
+       y="3.6585279"
+       ry="0.49259076" />
+    <path
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round"
+       d="m 9.6222513,7.6378767 -3.3695026,1e-7 L 6.9027881,6.5110436 7.2281413,7.0750385 8.2628535,5.2813804 9.6222516,7.637877 Z"
+       id="rect2-2" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="path3"
+       cx="6.7873502"
+       cy="4.8190036"
+       rx="0.48492798"
+       ry="0.48569915" />
+  </g>
+</svg>

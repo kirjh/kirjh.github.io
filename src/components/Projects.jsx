@@ -3,6 +3,7 @@ import '../styles/index.css'
 
 import {useEffect} from 'react'
 import galaData from '../projects/galatimer.json'
+import rotypeData from '../projects/rotype.json'
 
 function Card({jsonData}) {
   // Construct images for carousel
@@ -58,6 +59,7 @@ function Projects() {
         </div>
         <div className="card-container">
           <Card jsonData={galaData}/>
+          <Card jsonData={rotypeData}/>
         </div>
       </div>
     </>
