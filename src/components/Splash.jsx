@@ -79,7 +79,7 @@ function Splash() {
             <div className="splash s3" value="12"><img src="/cloud1.svg" /></div>
           </div>
           <div className="poi">
-            <div className="splash" value="4"><img src="/cloud2.svg" /></div>
+            <div className="splash" value="8"><img src="/cloud2.svg" /></div>
           </div>
           <div className="poi">
             <div className="splash" value="2"><img src="/cloud3.svg" /></div>
