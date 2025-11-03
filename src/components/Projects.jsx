@@ -114,7 +114,7 @@ function Projects() {
           <Card jsonData={templateData}/>
         </div>
         <div className="project-footer">
-          <p>Want to see more? My <a className="link" href={"https://github.com/kirjh?tab=repositories"} target="_blank">Github repository</a> is available.</p>
+          <p>Want to see more? My Github repository is available <a className="link" href={"https://github.com/kirjh?tab=repositories"} target="_blank">here</a>.</p>
         </div>
       </div>
     </>

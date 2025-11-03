@@ -11,10 +11,27 @@
   width: 80%;
   max-width: 1440px;
 
-  background-image: linear-gradient(to bottom, #1e1e31, #a58bbb);
+  background-color: #303553;
+  background-image: linear-gradient(#303553 0%, #433E65 50%, #745591 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
+}
+
+.splash-flex-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.poi {
+  position: relative;
 }
 
 .splash {
@@ -31,15 +48,13 @@
   color: var(--light_bg);
 }
 
-.splash-1 img {
-  width: 25vw;
-  max-width: 720px;
+.poi-1 {
+  width: 20%;
 }
 
-.splash-1 {
-  left: var(--test);
-  bottom: 30%;
-  
+.splash-1,
+.splash-1 img {
+  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,19 +63,11 @@
   }
 }
 
-:root {
-  --test: calc(80% * 0.25);
-}
-@media (min-width: 1440px) {
-  :root {
-    --test: calc(1440px * 0.25);
-  }
-}
 @media (orientation: portrait) or (max-width: 1080px) {
   .splash-container {
     width: 100%;
   }
-  :root {
-    --test: 25%;
+  .poi-1 {
+    width: 50%;
   }
 }

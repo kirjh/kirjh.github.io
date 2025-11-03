@@ -43,8 +43,11 @@ button {
 }
 .navbar a,
 .navbar a:after,
-button {
-  color: var(--light_sub_font);
+.navbar button {
+  color: var(--light_menu_font);
+}
+.navbar button:has(+ .show) {
+  color: #db3232;
 }
 .navbar a:hover,
 button:hover {
@@ -59,8 +62,7 @@ button:hover {
   filter: drop-shadow(0 0.5em 0.75em #00000080);
 }
 .navbar.pinned a,
-.navbar.pinned a:after,
-.navbar.pinned button {
+.navbar.pinned a:after {
   color: var(--light_menu_font);
   padding: 0 1em;
 }
@@ -72,19 +74,21 @@ button:hover {
 @media (prefers-color-scheme: dark) {
   .navbar a,
   .navbar a:after,
-  button {
-    color: var(--dark_sub_font);
+  .navbar button {
+    color: var(--dark_menu_font);
+  }
+  .navbar button:has(+ .show) {
+  color: #ff8585;
   }
   .navbar a:hover,
-  button:hover {
+  .navbar button:hover {
     color: var(--dark_font);
   }
   .navbar.pinned {
     background-color: var(--dark_menu);
   }
   .navbar.pinned a,
-  .navbar.pinned a:after,
-  .navbar.pinned button {
+  .navbar.pinned a:after {
     color: var(--dark_menu_font);
   }
   .navbar.pinned a:hover,

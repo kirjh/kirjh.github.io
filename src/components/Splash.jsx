@@ -47,9 +47,14 @@ function Splash() {
     <>
       <div className="spacer"></div>
       <div className="splash-container" id="home" ref={ref}>
-        <div className="splash splash-1">
-          <img src="/moon.svg" />
+        <div className="splash-flex-container">
+          <div className="poi poi-1">
+            <div className="splash splash-1">
+            <img src="/moon.svg" />
+          </div>
+          </div>
         </div>
+        
         <div className="splash splash-2"></div>
         <div className="splash splash-3"></div>
         <Border />
