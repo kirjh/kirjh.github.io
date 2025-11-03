@@ -29,6 +29,15 @@
   animation-fill-mode: forwards;
 }
 
+.card-link-container a {
+  margin: 0 0.75em;
+}
+
+.card-link-container span {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .gallery-container {
   position: relative;
   margin: 0 0 1.5em;
@@ -115,6 +124,12 @@
 .stack {
   padding-top: 1em;
   margin: auto 0 0;
+}
+
+.project-footer {
+  margin: 0 2em;
+  padding: 1em 1em 0;
+  text-align: center;
 }
 
 @keyframes slideCard {

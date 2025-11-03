@@ -19,12 +19,22 @@ function Card({jsonData}) {
       </li>
     )
   });
-  // construct scroll-markers
+  // Construct scroll-markers
   const buttons = keys.map((img) => {
     return (
       <a key={img} className={`scroll-marker ${jsonData.id} ${img == 0 ? "active" : ""}`} id={`${jsonData.id}${img}marker`}></a>
     )
   });
+  // Construct links
+  const links = jsonData.site_url ? (
+    <span className="card-link-container">
+      <a className="link" href={jsonData.site_url} target="_blank">Website</a>
+      <span className="subtext" aria-hidden="true">|</span>
+      <a className="link" href={jsonData.repo_url} target="_blank">Github page</a>
+    </span>
+  ) : (
+    <a className="link" href={jsonData.repo_url} target="_blank">Github page</a>
+  )
 
   useEffect(() => {
     const images = document.querySelectorAll(`#${jsonData.id} li`)
@@ -49,7 +59,7 @@ function Card({jsonData}) {
           </div>
         </div>
         <Heading h1={jsonData.name} su={jsonData.subtext} />
-        <a className="card-link link" href={jsonData.repo_url} target="_blank">{jsonData.repo_url}</a>
+        {links}
         <p>{jsonData.description}</p>
         <p className="stack">Tech stack: <span className="subtext">{jsonData.stack}</span></p>
       </div>
@@ -103,8 +113,8 @@ function Projects() {
           <Card jsonData={rotypeData}/>
           <Card jsonData={templateData}/>
         </div>
-        <div>
-          <p>See more projects at my Github repository.</p>
+        <div className="project-footer">
+          <p>Want to see more? My <a className="link" href={"https://github.com/kirjh?tab=repositories"} target="_blank">Github repository</a> is available.</p>
         </div>
       </div>
     </>
