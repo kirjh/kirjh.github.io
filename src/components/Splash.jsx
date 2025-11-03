@@ -5,7 +5,7 @@ import {useRef, useEffect} from 'react'
 function Border() {
   return (
     <>
-      <svg className="splash splash-border"
+      <svg className="splash-border"
         viewBox="0 0 13.758332 6.8791665"
         version="1.1"
         id="splash-border-svg"
@@ -28,7 +28,9 @@ function Border() {
 
 function Splash() {
   const ref = useRef(null);
-
+  let mouseX = 0;
+  let mouseY = 0;
+  
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
@@ -38,25 +40,51 @@ function Splash() {
     if (ref.current) {
       observer.observe(ref.current);
     }
+    document.addEventListener("mousemove", mouseParallax);
+    document.addEventListener("scroll", parallaxEffect);
     return () => {
       observer.disconnect();
+      document.removeEventListener("mousemove", parallaxEffect);
     }
   }, []);
+
+  function mouseParallax(event) {
+    if (window.innerWidth <= 1080) return;
+    mouseX = 2 * ((window.innerWidth / 2) - event.pageX) / window.innerWidth;
+    mouseY = 2 * ((window.innerHeight / 2) - event.pageY) / window.innerHeight;
+    parallaxEffect();
+  }
+  function parallaxEffect(event) {
+    document.querySelectorAll(".splash").forEach((splash) => {
+      if (window.innerWidth <= 1080) {
+      mouseX = 0;
+      mouseY = 0;
+      }
+      const multiplier = splash.getAttribute("value");
+      splash.style.transform = `translateX(${mouseX * 5 * multiplier}px) translateY(${(mouseY * 5 * multiplier) - (window.scrollY/100 * 3 * multiplier)}px)`;
+    });
+  }
+
 
   return (
     <>
       <div className="spacer"></div>
       <div className="splash-container" id="home" ref={ref}>
         <div className="splash-flex-container">
-          <div className="poi poi-1">
-            <div className="splash splash-1">
-            <img src="/moon.svg" />
+          <div className="poi">
+            <div className="splash" value="1"><img src="/moon.svg" /></div>
           </div>
+          <div className="poi">
+            <div className="splash" value="12"><img src="/cloud1.svg" /></div>
+            <div className="splash s3" value="12"><img src="/cloud1.svg" /></div>
+          </div>
+          <div className="poi">
+            <div className="splash" value="4"><img src="/cloud2.svg" /></div>
+          </div>
+          <div className="poi">
+            <div className="splash" value="2"><img src="/cloud3.svg" /></div>
           </div>
         </div>
-        
-        <div className="splash splash-2"></div>
-        <div className="splash splash-3"></div>
         <Border />
       </div>
     </>
