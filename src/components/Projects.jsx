@@ -47,10 +47,10 @@ function Card({jsonData}) {
           </div>
         </div>
         <h1>{jsonData.name}</h1>
-        <p className="subtext" style={{marginTop: 0}}>{jsonData.subtext}</p>
-        <a className="link" href={jsonData.url} target="_blank">{jsonData.url}</a>
+        <p className="subheading subtext">{jsonData.subtext}</p>
+        <a className="card-link link" href={jsonData.url} target="_blank">{jsonData.url}</a>
         <p>{jsonData.description}</p>
-        <p className="stack">Tech stack: <span className="subtext">{jsonData.stack}</span></p>
+        <p>Tech stack: <span className="subtext">{jsonData.stack}</span></p>
       </div>
     </>
   )

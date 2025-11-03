@@ -16,7 +16,7 @@
   padding: 0.5em 1em;
   height: min-content;
 
-  transition: all 0.5s;
+  transition: padding 0.5s;
 }
 
 .navbar-spacer {

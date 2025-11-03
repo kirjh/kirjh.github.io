@@ -11,7 +11,7 @@
   width: 80%;
   max-width: 1440px;
 
-  background-image: linear-gradient(to bottom, #524c93, #a97a58);
+  background-image: linear-gradient(to bottom, #1e1e31, #a58bbb);
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
@@ -29,9 +29,13 @@
   color: var(--light_bg);
 }
 
-.splash {
-  pointer-events: none;
-  position: absolute;
+.splash-1 img {
+  width: 50vw;
+}
+
+.splash-1 {
+  left: 25%;
+  bottom: 20vh;
 }
 
 @media (prefers-color-scheme: dark) {
