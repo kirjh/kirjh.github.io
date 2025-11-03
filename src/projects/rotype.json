@@ -1,0 +1,26 @@
+{
+  "id": "rotype",
+  "name": "RoType AI",
+  "subtext": "An AI assisted typing test.",
+
+  "repo_url": "https://github.com/",
+  "site_url": null,
+
+  "description": "A typing test website that tracks skill heuristics and formulates informed suggestions for improvement with the help of Gemini AI. Features standard typing test functions and an assistive chatbot. 2025 team project.",
+  "stack": "React, HTML, Tailwind, Gemini AI, Oceanify",
+
+  "images": {
+    "0": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    },
+    "1": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    },
+    "2": {
+      "src": "/default_image.svg",
+      "alt": "Placeholder image."
+    }
+  }
+}

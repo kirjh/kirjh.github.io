@@ -1,0 +1,138 @@
+.navbar {
+  position: sticky;
+  top: 1em;
+  z-index: 100;
+  grid-column-start: 1;
+  grid-row-start: 2;
+
+  display: flex;
+  text-align: center;
+
+  background-color: transparent;
+  font-size: 1.7em;
+
+  border-radius: 2em;
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  height: min-content;
+
+  transition: padding 0.5s;
+}
+
+.navbar-spacer {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  font-size: 1.7em;
+  height: 4em;
+  width: 1em;
+}
+
+button {
+  font-family: Quicksand, Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.navbar a, 
+button {
+  padding: 0 0.5em;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.5s;
+}
+.navbar a,
+.navbar a:after,
+.navbar button {
+  color: var(--light_menu_font);
+}
+.navbar button:has(+ .show) {
+  color: #db3232;
+}
+.navbar a:hover,
+button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--light_font);
+}
+.navbar.pinned {
+  padding: 0.75em 1em;
+  font-size: 1em;
+  background-color: var(--light_menu);
+  filter: drop-shadow(0 0.5em 0.75em #00000080);
+}
+.navbar.pinned a,
+.navbar.pinned a:after {
+  color: var(--light_menu_font);
+  padding: 0 1em;
+}
+.navbar.pinned a:hover,
+.navbar.pinned button:hover {
+  color: var(--light_font);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar a,
+  .navbar a:after,
+  .navbar button {
+    color: var(--dark_menu_font);
+  }
+  .navbar button:has(+ .show) {
+  color: #ff8585;
+  }
+  .navbar a:hover,
+  .navbar button:hover {
+    color: var(--dark_font);
+  }
+  .navbar.pinned {
+    background-color: var(--dark_menu);
+  }
+  .navbar.pinned a,
+  .navbar.pinned a:after {
+    color: var(--dark_menu_font);
+  }
+  .navbar.pinned a:hover,
+  .navbar.pinned button:hover {
+  color: var(--dark_font);
+  }
+}
+
+@media (orientation: portrait) or (max-width: 1080px) {
+  .navbar {
+    flex-direction: column-reverse;
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+  .navbar-spacer {
+    height: 7em;
+  }
+  .navbar.pinned {
+    flex-direction: column;
+    padding: 0 1em;
+  }
+  .navbar:has(#menu.show),
+  .navbar.pinned:has(#menu.show) {
+    padding: 0.5em 1em;
+  }
+  .navbar a,
+  .navbar.pinned a {
+    padding: 0.5em 0.25em;
+  }
+  #menu {
+    overflow: hidden;
+    max-height: 0;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #menu.show {
+    overflow: hidden;
+    height: auto;
+    max-height: 100vh;
+  }
+  .navbar button,
+  .navbar.pinned button {
+    padding: 0.5em 2.5em;
+    display: block;
+  }
+}

@@ -1,0 +1,27 @@
+#about div {
+  margin: 3em 2em 0;
+  padding: 1em;
+  flex: 0 1 50%;
+}
+
+#about #about-1 {
+  text-align: right;
+}
+
+#about #about-2 {
+  margin-top: 12em;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (orientation: portrait) or (max-width: 1080px) {
+  #about #about-1 {
+    margin: 2em 2em 0;
+    text-align: center;
+  }
+  #about #about-2 {
+    margin: 0 2em 2em;
+    text-align: center;
+  }
+}
