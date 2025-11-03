@@ -3,7 +3,8 @@
   "name": "Template",
   "subtext": "Hello World!",
 
-  "url": "https://github.com/",
+  "repo_url": "https://github.com/",
+  "site_url": null,
 
   "description": "Description.",
   "stack": "Default",

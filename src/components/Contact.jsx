@@ -4,6 +4,7 @@ import '../styles/index.css'
 import emailLogo from '../assets/email.svg'
 import githubLogo from '../assets/github.svg'
 import linkedinLogo from '../assets/linkedin.svg'
+import Heading from './Heading.jsx'
 
 import {useState, useEffect} from 'react'
 
@@ -31,8 +32,7 @@ function Contact() {
     <>
       <div id="contact" className="container">
         <div className="header">
-          <h1>Contact me</h1>
-          <p className="subtext">Let's get down to business.</p>
+          <Heading h1 = "Contact me" su="Let's get down to business." />
         </div>
         <div className="contact-body">
           <div className="contact-card-container">

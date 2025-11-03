@@ -37,6 +37,7 @@
   max-width: 1440p;
 
   border-radius: 2em 2em 0 0;
+  font-size: 0.9em;
   text-align: right;
   
   color: var(--light_menu_font);

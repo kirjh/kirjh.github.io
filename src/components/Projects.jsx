@@ -1,6 +1,8 @@
 import '../styles/projects.css'
 import '../styles/index.css'
 
+import Heading from './Heading.jsx'
+
 import {useEffect} from 'react'
 import galaData from '../projects/galatimer.json' with {type: 'json'}
 import coinData from '../projects/coinanalyzer.json' with {type: 'json'}
@@ -46,11 +48,10 @@ function Card({jsonData}) {
             {buttons}
           </div>
         </div>
-        <h1>{jsonData.name}</h1>
-        <p className="subheading subtext">{jsonData.subtext}</p>
-        <a className="card-link link" href={jsonData.url} target="_blank">{jsonData.url}</a>
+        <Heading h1={jsonData.name} su={jsonData.subtext} />
+        <a className="card-link link" href={jsonData.repo_url} target="_blank">{jsonData.repo_url}</a>
         <p>{jsonData.description}</p>
-        <p>Tech stack: <span className="subtext">{jsonData.stack}</span></p>
+        <p className="stack">Tech stack: <span className="subtext">{jsonData.stack}</span></p>
       </div>
     </>
   )
@@ -94,14 +95,16 @@ function Projects() {
     <>
       <div id="projects" className="container">
         <div className="header">
-          <h1>My projects</h1>
-          <p className="subtext">A curated list of some things I've made.</p>
+          <Heading h1="My projects" su="A curated list of things I've made." />
         </div>
         <div className="card-container">
           <Card jsonData={galaData}/>
           <Card jsonData={coinData}/>
           <Card jsonData={rotypeData}/>
           <Card jsonData={templateData}/>
+        </div>
+        <div>
+          <p>See more projects at my Github repository.</p>
         </div>
       </div>
     </>
