@@ -7,7 +7,7 @@
   "site_url": null,
 
   "description": "A typing test website that tracks skill heuristics and formulates informed suggestions for improvement with the help of Gemini AI. Features standard typing test functions and an assistive chatbot. 2025 team project.",
-  "stack": "ReactJS, HTML, Tailwind, Gemini AI",
+  "stack": "React, HTML, Tailwind, Gemini AI, Oceanify",
 
   "images": {
     "0": {

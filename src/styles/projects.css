@@ -72,7 +72,7 @@
   content: "";
   width: 0.75em;
   height: 0.75em;
-  background-color: var(--light_menu_font);
+  background-color: var(--dark_sub_font);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -145,7 +145,7 @@
 
 @media (prefers-color-scheme: dark) {
   .scroll-marker {
-  background-color: var(--dark_menu_font);
+  background-color: var(--light_sub_font);
   }
   .scroll-marker.active {
     background-color: var(--dark_font);

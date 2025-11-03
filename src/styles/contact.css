@@ -42,6 +42,7 @@
   
   color: var(--light_menu_font);
   background-color: var(--light_menu);
+  filter: drop-shadow(0 -0.5em 0.75em #00000040);
 }
 
 @media (min-height: 864px) {

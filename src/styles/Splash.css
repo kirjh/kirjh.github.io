@@ -19,6 +19,8 @@
 
 .splash {
   pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
   position: absolute;
 }
 
@@ -30,12 +32,14 @@
 }
 
 .splash-1 img {
-  width: 50vw;
+  width: 25vw;
+  max-width: 720px;
 }
 
 .splash-1 {
-  left: 25%;
-  bottom: 20vh;
+  left: var(--test);
+  bottom: 30%;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,8 +48,19 @@
   }
 }
 
+:root {
+  --test: calc(80% * 0.25);
+}
+@media (min-width: 1440px) {
+  :root {
+    --test: calc(1440px * 0.25);
+  }
+}
 @media (orientation: portrait) or (max-width: 1080px) {
   .splash-container {
     width: 100%;
+  }
+  :root {
+    --test: 25%;
   }
 }

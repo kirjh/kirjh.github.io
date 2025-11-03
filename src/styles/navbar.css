@@ -56,7 +56,7 @@ button:hover {
   padding: 0.75em 1em;
   font-size: 1em;
   background-color: var(--light_menu);
-  filter: drop-shadow(0 0.5em 0.5em #00000080);
+  filter: drop-shadow(0 0.5em 0.75em #00000080);
 }
 .navbar.pinned a,
 .navbar.pinned a:after,
@@ -66,13 +66,10 @@ button:hover {
 }
 .navbar.pinned a:hover,
 .navbar.pinned button:hover {
-  color: var(--dark_font);
+  color: var(--light_font);
 }
 
 @media (prefers-color-scheme: dark) {
-  .navbar.pinned {
-    filter: drop-shadow(0 0.5em 0.5em #00000080);
-  }
   .navbar a,
   .navbar a:after,
   button {
@@ -92,7 +89,7 @@ button:hover {
   }
   .navbar.pinned a:hover,
   .navbar.pinned button:hover {
-  color: var(--light_font);
+  color: var(--dark_font);
   }
 }
 
