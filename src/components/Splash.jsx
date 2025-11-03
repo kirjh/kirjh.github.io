@@ -61,8 +61,9 @@ function Splash() {
       mouseY = 0;
       }
       const multiplier = splash.getAttribute("value");
-      splash.style.transform = `translateX(${mouseX * 5 * multiplier}px) translateY(${(mouseY * 5 * multiplier) - (window.scrollY/100 * 3 * multiplier)}px)`;
+      splash.style.transform = `translateX(${mouseX * 5 * multiplier}px) translateY(${(mouseY * 5 * multiplier) + ((window.scrollY / 15) * (32 / multiplier))}px)`;
     });
+    document.querySelector(".splash-bg").style.transform = `translateY(${-(window.scrollY / 5) * 8}px)`;
   }
 
 
@@ -72,17 +73,19 @@ function Splash() {
       <div className="splash-container" id="home" ref={ref}>
         <div className="splash-flex-container">
           <div className="poi">
-            <div className="splash" value="1"><img src="/moon.svg" /></div>
+            <div className="splash" value="2"><img src="/moon.svg" /></div>
           </div>
           <div className="poi">
-            <div className="splash" value="12"><img src="/cloud1.svg" /></div>
-            <div className="splash s3" value="12"><img src="/cloud1.svg" /></div>
+            <div className="splash" value="16"><img src="/cloud1.svg" /></div>
           </div>
           <div className="poi">
             <div className="splash" value="8"><img src="/cloud2.svg" /></div>
           </div>
           <div className="poi">
-            <div className="splash" value="2"><img src="/cloud3.svg" /></div>
+            <div className="splash" value="4"><img src="/cloud3.svg" /></div>
+          </div>
+          <div className="poi">
+            <div className="splash-bg"></div>
           </div>
         </div>
         <Border />

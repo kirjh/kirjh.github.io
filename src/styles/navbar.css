@@ -53,7 +53,6 @@ button {
 button:hover {
   text-decoration: none;
   cursor: pointer;
-  color: var(--light_font);
 }
 .navbar.pinned {
   padding: 0.75em 1em;
@@ -66,11 +65,23 @@ button:hover {
   color: var(--light_menu_font);
   padding: 0 1em;
 }
-.navbar.pinned a:hover,
-.navbar.pinned button:hover {
-  color: var(--light_font);
-}
 
+@media (orientation: landscape) and (min-width: 1080px) {
+  .navbar a:hover,
+  button:hover,
+  .navbar.pinned a:hover,
+  .navbar.pinned button:hover {
+    color: var(--light_font);
+  }
+  @media (prefers-color-scheme: dark) {
+    .navbar a:hover,
+    button:hover,
+    .navbar.pinned a:hover,
+    .navbar.pinned button:hover {
+      color: var(--dark_font);
+    }
+  }
+}
 @media (prefers-color-scheme: dark) {
   .navbar a,
   .navbar a:after,
@@ -80,20 +91,12 @@ button:hover {
   .navbar button:has(+ .show) {
   color: #ff8585;
   }
-  .navbar a:hover,
-  .navbar button:hover {
-    color: var(--dark_font);
-  }
   .navbar.pinned {
     background-color: var(--dark_menu);
   }
   .navbar.pinned a,
   .navbar.pinned a:after {
     color: var(--dark_menu_font);
-  }
-  .navbar.pinned a:hover,
-  .navbar.pinned button:hover {
-  color: var(--dark_font);
   }
 }
 

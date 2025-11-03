@@ -11,12 +11,8 @@
   width: 80%;
   max-width: 1440px;
 
-  background-color: #303553;
-  background-image: linear-gradient(#2D3356 0%, #2D3356 25%, #745591 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-color: #745591;
+
   position: relative;
   overflow: hidden;
 }
@@ -35,6 +31,7 @@
 }
 
 .splash,
+.splash-bg,
 .splash-border {
   pointer-events: none;
   -webkit-user-select: none;
@@ -58,29 +55,36 @@
 .poi:nth-child(1) {
   width: 20%;
   bottom: 50%;
-  z-index: 0;
+  z-index: 1;
 }
 .poi:nth-child(2) {
   width: 125%;
   bottom: -50vw;
-  z-index: 3;
+  z-index: 4;
 }
 .poi:nth-child(3) {
   width: 125%;
   bottom: -45vw;
-  z-index: 2;
+  z-index: 3;
 }
 .poi:nth-child(4) {
   width: 125%;
   bottom: -45vw;
-  z-index: 1;
+  z-index: 2;
+}
+.poi:nth-child(5) {
+  width: 125%;
+  bottom: 100vh;
+  z-index: 0;
 }
 
 .splash {
   bottom: 1px;
 }
-.splash.s3 {
-  bottom: -20vh;
+.splash-bg {
+  background-image: linear-gradient(#2D3356 0%, #2D3356 25%, #745591 100%);
+  height: 200vh;
+  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {

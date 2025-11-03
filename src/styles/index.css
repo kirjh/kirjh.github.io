@@ -66,8 +66,15 @@ body {
   transition: color 0.5s;
 }
 
-.link:hover {
-  color: var(--light_font);
+@media (orientation: landscape) and (min-width: 1080px) {
+  .link:hover {
+    color: var(--light_font);
+  }
+  @media (prefers-color-scheme: dark) {
+    .link:hover {
+      color: var(--dark_font);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,9 +93,6 @@ body {
   .link,
   .link:after {
     color: var(--dark_link);
-  }
-  .link:hover {
-    color: var(--dark_font);
   }
 }
 
