@@ -12,6 +12,7 @@ function Home() {
   return (
     <>
       <Splash />
+      <div style={{backgroundColor: "#FFDE59", borderRadius: "1.5em", padding: "1.5em", color: "#000"}}>This website is under construction</div>
       <Navbar />
       <About />
       <Projects />
