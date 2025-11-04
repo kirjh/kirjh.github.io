@@ -2,15 +2,21 @@ import '../styles/navbar.css'
 import {useEffect} from 'react'
 
 function Navbar() {
+  function removeClasses() {
+    document.querySelector("#menu").classList.remove("show");
+    document.querySelector(".navbar-spacer").classList.remove("show");
+    document.querySelector("button").innerHTML = "Menu";
+  }
+
   function goto(href) {
     document.querySelector(href).scrollIntoView();
-    document.querySelector("#menu").classList.remove("show");
-    document.querySelector("button").innerHTML = "Menu";
+    removeClasses();
   }
 
   function openMenu() {
     const menu = document.querySelector("#menu");
     menu.classList.toggle("show");
+    document.querySelector(".navbar-spacer").classList.toggle("show");
     document.querySelector("button").innerHTML = menu.classList.contains("show") ? "Close" : "Menu";
   }
 
@@ -19,8 +25,7 @@ function Navbar() {
     for (const item of items) {
       if (item == e.target) return;
     }
-    document.querySelector("#menu").classList.remove("show");
-    document.querySelector("button").innerHTML = "Menu";
+    removeClasses();
   }
 
   useEffect(() => {

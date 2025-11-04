@@ -4,7 +4,7 @@
   --light_font: #000;
   --light_menu: #fff;
   --light_sub_font: #555;
-  --light_menu_font: #7d639c;
+  --light_menu_font: #831e91;
   --light_link: #014dbe;
 
   --dark_bg: #242424;
@@ -12,7 +12,7 @@
   --dark_font: #fff;
   --dark_menu: #2D3356;
   --dark_sub_font: #999;
-  --dark_menu_font: #d7b1ce;
+  --dark_menu_font: #f1bce5;
   --dark_link: #66adff;
 
   font-family: Quicksand, Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
@@ -34,6 +34,9 @@ body {
 
 .subtext {
   color: var(--light_sub_font);
+}
+.highlight {
+  color: var(--light_menu_font);
 }
 
 .header {
@@ -86,6 +89,9 @@ body {
   }
   .subtext {
     color: var(--dark_sub_font);
+  }
+  .highlight {
+    color: var(--dark_menu_font);
   }
   .svg-icon {
     filter: invert(100%);

@@ -8,11 +8,20 @@ function About() {
       <div id="about" className="flex-container">
         <div id="about-1">
           <Heading h1="About me" su="Hello and welcome!"/>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ex viverra, lobortis massa id, commodo ante. Morbi ullamcorper lorem vitae orci eleifend commodo. Suspendisse vel justo egestas, elementum dui vel, luctus mauris. Nulla lobortis ornare ante, ac faucibus ipsum sodales ut. Donec semper, nisl congue pellentesque sollicitudin, lorem quam fringilla massa, vitae egestas lacus eros condimentum mi. Nunc ligula purus, ornare eget nibh nec, efficitur luctus est. Suspendisse vel nisl ornare, porta libero sit amet, volutpat sem. Nulla facilisi. In vel eros id dui placerat aliquet sed id tellus. Mauris lacinia lacus nec interdum interdum. Nunc sed auctor purus. Integer a nunc placerat, semper odio porttitor, ultrices justo. Maecenas turpis mauris, dapibus vitae augue in, pulvinar ullamcorper sapien.</p>
+          <p>I am currently pursuing a <span className="highlight">Bachelor's in Computing Science</span> at Simon Fraser University.</p>
+          <p>
+            Computers and computer programming have captured my fascination since I was introduced to Scratch in grade school. 
+            I have continuously improved my skills since and I often use my knowledge to assist and teach my peers. 
+            I currently work as a part-time <span className="highlight">Scratch</span> and <span className="highlight">Python</span> tutor in addition to my studies.
+          </p>
+          <p>I dabble in art and graphic design in my free time and have an appreciation for simple, clean, and useable interfaces.</p>
         </div>
         <div id="about-2">
-          <Heading h1="What I do" su="A lot of little things."/>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Heading h1="What I do" su="A little here, a little there."/>
+          <p><span className="highlight">C/C#: </span>I have moderate experience with handling pointers and can <i>mostly</i> avoid segfaults.</p>
+          <p><span className="highlight">Javascript/React: </span>Used often in making simple web apps. This website was made with custom React components and no other external libraries.</p>
+          <p><span className="highlight">Java: </span>Experimented some with Java in high school, when I made a simple minesweeper game.</p>
+          <p><span className="highlight">Python: </span>My most recent projects have utilized Python in the realm of machine learning and multimedia processing.</p>
         </div>
       </div>
     </>

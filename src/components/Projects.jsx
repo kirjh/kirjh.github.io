@@ -61,7 +61,7 @@ function Card({jsonData}) {
         <Heading h1={jsonData.name} su={jsonData.subtext} />
         {links}
         <p>{jsonData.description}</p>
-        <p className="stack">Tech stack: <span className="subtext">{jsonData.stack}</span></p>
+        <p className="stack">Tech stack: <span className="highlight">{jsonData.stack}</span></p>
       </div>
     </>
   )
@@ -114,7 +114,7 @@ function Projects() {
           <Card jsonData={templateData}/>
         </div>
         <div className="project-footer">
-          <p>Want to see more? My Github repository is available <a className="link" href={"https://github.com/kirjh?tab=repositories"} target="_blank">here</a>.</p>
+          <p>Would you like to know more? My full Github repository is available <a className="link" href={"https://github.com/kirjh?tab=repositories"} target="_blank">here</a>.</p>
         </div>
       </div>
     </>

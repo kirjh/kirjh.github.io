@@ -39,6 +39,8 @@ button {
   padding: 0 0.5em;
   text-decoration: none;
   font-size: 1.2em;
+}
+.navbar a {
   transition: all 0.5s;
 }
 .navbar a,
@@ -108,6 +110,9 @@ button:hover {
   }
   .navbar-spacer {
     height: 7em;
+  }
+  .navbar-spacer.show {
+    height: 18em;
   }
   .navbar.pinned {
     flex-direction: column;
