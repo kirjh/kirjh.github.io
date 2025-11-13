@@ -16,10 +16,6 @@
   flex-direction: column;
   padding: 1em 1em 2.5em;
   text-align: center;
-
-  /*border-radius: 2em;
-  background-color: var(--light_alt_bg);*/
-
   opacity: 0;
 }
 
@@ -54,9 +50,6 @@
   margin: 0;
   border-radius: 1em;
   gap: 1em;
-
-  /*anchor-name: --my-carousel;
-  scroll-marker-group: after;*/
 }
 
 .scroll-marker-container {
@@ -80,29 +73,6 @@
 .scroll-marker.active {
   background-color: var(--light_font);
 }
-/*
-.gallery-container::scroll-marker-group {
-  position: absolute;
-  position-anchor: --my-carousel;
-  bottom: calc(anchor(bottom) - 2em);
-  justify-self: anchor-center;
-
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-
-.image::scroll-marker {
-  content: "";
-  width: 1em;
-  height: 1em;
-  background-color: var(--light_menu_font);
-  border-radius: 50%;
-}
-
-.image::scroll-marker:target-current {
-  background-color: var(--light_font);
-}*/
 
 .image {
   display: flex;
@@ -176,13 +146,6 @@
     border-color: var(--dark_menu_font);
     color: var(--dark_menu_font);
   }
-  /*
-  .image::scroll-marker {
-    background-color: var(--dark_menu_font);
-  }
-  .image::scroll-marker:target-current {
-    background-color: var(--dark_font);
-  }*/
 }
 
 @media (min-width: 1441px) {
