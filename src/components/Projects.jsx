@@ -84,6 +84,7 @@ function Projects() {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0) {
           entry.target.classList.add("show");
+          cardObserver.unobserve(entry.target);
         }
       });
     }, {threshold: [0]});

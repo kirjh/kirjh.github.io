@@ -28,8 +28,8 @@ function Border() {
 
 function Splash() {
   const ref = useRef(null);
-  let mouseX = 0;
-  let mouseY = 0;
+  const mouseX = useRef(0);
+  const mouseY = useRef(0);
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -50,20 +50,20 @@ function Splash() {
 
   function mouseParallax(event) {
     if (window.innerWidth <= 1080) return;
-    mouseX = 2 * ((window.innerWidth / 2) - event.pageX) / window.innerWidth;
-    mouseY = 2 * ((window.innerHeight / 2) - event.pageY) / window.innerHeight;
+    mouseX.current = 2 * ((window.innerWidth / 2) - event.pageX) / window.innerWidth;
+    mouseY.current = 2 * ((window.innerHeight / 2) - event.pageY) / window.innerHeight;
     parallaxEffect();
   }
-  function parallaxEffect(event) {
+  function parallaxEffect() {
     document.querySelectorAll(".splash").forEach((splash) => {
       if (window.innerWidth <= 1080) {
-      mouseX = 0;
-      mouseY = 0;
+      mouseX.current = 0;
+      mouseY.current = 0;
       }
       const multiplier = splash.getAttribute("value");
-      splash.style.transform = `translateX(${mouseX * 5 * multiplier}px) translateY(${(mouseY * 5 * multiplier) + ((window.scrollY / 15) * (32 / multiplier))}px)`;
+      splash.style.transform = `translate3d(${mouseX.current * 5 * multiplier}px, ${(mouseY.current * 5 * multiplier) + ((window.scrollY / 15) * (32 / multiplier))}px, 0)`;
     });
-    document.querySelector(".splash-bg").style.transform = `translateY(${-(window.scrollY / 5) * 8}px)`;
+    document.querySelector(".splash-bg").style.transform = `translate3d(0, ${-(window.scrollY / 5) * 8}px, 0)`;
   }
 
 
