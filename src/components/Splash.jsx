@@ -73,10 +73,10 @@ function Splash() {
       <div className="splash-container" id="home" ref={ref}>
         <div className="splash-flex-container">
           <div className="poi">
-            <div className="splash" value="2"><img src="/moon.svg" /></div>
+            <div className="splash" value="3"><img src="/moon.svg" /></div>
           </div>
           <div className="poi">
-            <div className="splash" value="16"><img src="/cloud1.svg" /></div>
+            <div className="splash" value="64"><img src="/cloud1.svg" /></div>
           </div>
           <div className="poi">
             <div className="splash" value="8"><img src="/cloud2.svg" /></div>
