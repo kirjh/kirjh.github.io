@@ -1,6 +1,6 @@
 :root {
   --light_bg: #dbdbdb;
-  --light_alt_bg: #eee;
+  --light_alt_bg: #fff;
   --light_font: #000;
   --light_menu: #fff;
   --light_sub_font: #555;
@@ -8,7 +8,7 @@
   --light_link: #014dbe;
 
   --dark_bg: #242424;
-  --dark_alt_bg: #333;
+  --dark_alt_bg: #111;
   --dark_font: #fff;
   --dark_menu: #2D3356;
   --dark_sub_font: #999;

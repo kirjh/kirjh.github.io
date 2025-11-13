@@ -7,7 +7,7 @@
   "site_url": null,
 
   "description": "A web app that performs image recognition using a convolutional neural network. THe CNN is implemented with the Scikit-Learn library, and training consisteted of preprocessing raw data and learning through stochastic gradient descent. 2025 team project.",
-  "stack": "Python, Scikit-Learn, Vercel, Render",
+  "stack": ["Python", "Scikit-Learn", "Vercel", "Render"],
 
   "images": {
     "0": {

@@ -34,7 +34,13 @@ function Card({jsonData}) {
     </span>
   ) : (
     <a className="link" href={jsonData.repo_url} target="_blank">Github page</a>
-  )
+  );
+  // Construct tech stack
+  const stack = jsonData.stack.map((item) => {
+    return (
+      <p key={item} className="stackItem">{item}</p>
+    )
+  });
 
   useEffect(() => {
     const images = document.querySelectorAll(`#${jsonData.id} li`)
@@ -61,7 +67,12 @@ function Card({jsonData}) {
         <Heading h1={jsonData.name} su={jsonData.subtext} />
         {links}
         <p>{jsonData.description}</p>
-        <p className="stack">Tech stack: <span className="highlight">{jsonData.stack}</span></p>
+        <div className="stack-container">
+          <p className="stack">Tech stack:</p>
+          <div>
+            {stack}
+          </div>
+        </div>
       </div>
     </>
   )
