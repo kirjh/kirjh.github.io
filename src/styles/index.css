@@ -66,12 +66,13 @@ body {
 .link:after {
   color: var(--light_link);
   text-decoration: none;
-  transition: color 0.5s;
+  transition: color 0.25s;
 }
 
 @media (orientation: landscape) and (min-width: 1080px) {
   .link:hover {
     color: var(--light_font);
+    text-decoration: underline;
   }
   @media (prefers-color-scheme: dark) {
     .link:hover {

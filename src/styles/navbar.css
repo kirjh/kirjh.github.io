@@ -16,7 +16,7 @@
   padding: 0.5em 1em;
   height: min-content;
 
-  transition: padding 0.5s;
+  transition: padding 0.25s;
 }
 
 .navbar-spacer {
@@ -41,7 +41,7 @@ button {
   font-size: 1.2em;
 }
 .navbar a {
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .navbar a,
 .navbar a:after,
