@@ -50,8 +50,8 @@ function Splash() {
 
   function mouseParallax(event) {
     if (window.innerWidth <= 1080) return;
-    mouseX.current = 2 * ((window.innerWidth / 2) - event.pageX) / window.innerWidth;
-    mouseY.current = 2 * ((window.innerHeight / 2) - event.pageY) / window.innerHeight;
+    mouseX.current = 2 * ((window.innerWidth / 2) - event.screenX) / window.innerWidth;
+    mouseY.current = 2 * ((window.innerHeight / 2) - event.screenY) / window.innerHeight;
     parallaxEffect();
   }
   function parallaxEffect() {
@@ -76,7 +76,7 @@ function Splash() {
             <div className="splash" value="3"><img src="/moon.svg" /></div>
           </div>
           <div className="poi">
-            <div className="splash" value="32"><img src="/cloud1.svg" /></div>
+            <div className="splash" value="16"><img src="/cloud1.svg" /></div>
           </div>
           <div className="poi">
             <div className="splash" value="8"><img src="/cloud2.svg" /></div>
