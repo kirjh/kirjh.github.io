@@ -36,9 +36,9 @@ function Contact() {
         </div>
         <div className="contact-body">
           <div className="contact-card-container">
-            <ContactCard src={emailLogo} href="https://github.com" text="Email" alt="Email icon."/>
-            <ContactCard src={githubLogo} href="https://github.com" text="Github" alt="Github icon."/>
-            <ContactCard src={linkedinLogo} href="https://linkedin.com" text="Linkedin" alt="Linkedin icon."/>
+            <ContactCard src={emailLogo} href="https://github.com" text="Email" alt=""/>
+            <ContactCard src={githubLogo} href="https://github.com" text="Github" alt=""/>
+            <ContactCard src={linkedinLogo} href="https://linkedin.com" text="Linkedin" alt=""/>
           </div>
           <p className="subtext">Click any link above to get started.</p>
         </div>

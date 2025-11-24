@@ -69,20 +69,20 @@ function Splash() {
 
   return (
     <>
-      <div className="spacer"></div>
-      <div className="splash-container" id="home" ref={ref}>
+      <div className="spacer" aria-hidden="true"></div>
+      <div className="splash-container" id="home" ref={ref} aria-hidden="true">
         <div className="splash-flex-container">
           <div className="poi">
-            <div className="splash" value="3"><img src="/moon.svg" /></div>
+            <div className="splash" value="3"><img src="/moon.svg" alt=""/></div>
           </div>
           <div className="poi">
-            <div className="splash" value="16"><img src="/cloud1.svg" /></div>
+            <div className="splash" value="16"><img src="/cloud1.svg" alt=""/></div>
           </div>
           <div className="poi">
-            <div className="splash" value="8"><img src="/cloud2.svg" /></div>
+            <div className="splash" value="8"><img src="/cloud2.svg" alt=""/></div>
           </div>
           <div className="poi">
-            <div className="splash" value="4"><img src="/cloud3.svg" /></div>
+            <div className="splash" value="4"><img src="/cloud3.svg" alt=""/></div>
           </div>
           <div className="poi">
             <div className="splash-bg"></div>

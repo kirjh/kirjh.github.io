@@ -38,12 +38,12 @@ function Navbar() {
   return (
     <>
       <div className="navbar">
-        <button type="button" onClick={()=> openMenu()}>Menu</button>
+        <button type="button" onClick={()=> openMenu()} tabindex="0">Menu</button>
         <div id="menu">
-          <a onClick={()=> goto("#home")}>Home</a>
-          <a onClick={()=> goto("#about")}>About</a>
-          <a onClick={()=> goto("#projects")}>Projects</a>
-          <a onClick={()=> goto("#contact")}>Contact</a>
+          <a onClick={()=> goto("#home") } tabindex="0">Home</a>
+          <a onClick={()=> goto("#about")} tabindex="0">About</a>
+          <a onClick={()=> goto("#projects")} tabindex="0">Projects</a>
+          <a onClick={()=> goto("#contact")} tabindex="0">Contact</a>
         </div>
       </div>
       <div className="navbar-spacer"></div>

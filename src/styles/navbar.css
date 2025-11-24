@@ -130,11 +130,12 @@
     overflow: hidden;
     max-height: 0;
     height: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
   }
   #menu.show {
     overflow: hidden;
+    display: flex;
     height: auto;
     max-height: 100vh;
   }
