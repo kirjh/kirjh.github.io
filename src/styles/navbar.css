@@ -27,7 +27,7 @@
   width: 1em;
 }
 
-button {
+.navbar button {
   font-family: Quicksand, Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
   background-color: transparent;
   border: none;
@@ -35,7 +35,7 @@ button {
 }
 
 .navbar a, 
-button {
+.navbar button {
   padding: 0 0.5em;
   text-decoration: none;
   font-size: 1.2em;
@@ -52,7 +52,7 @@ button {
   color: #db3232;
 }
 .navbar a:hover,
-button:hover {
+.navbar button:hover {
   text-decoration: none;
   cursor: pointer;
 }
@@ -70,14 +70,14 @@ button:hover {
 
 @media (orientation: landscape) and (min-width: 1080px) {
   .navbar a:hover,
-  button:hover,
+  .navbar button:hover,
   .navbar.pinned a:hover,
   .navbar.pinned button:hover {
     color: var(--light_font);
   }
   @media (prefers-color-scheme: dark) {
     .navbar a:hover,
-    button:hover,
+    .navbar button:hover,
     .navbar.pinned a:hover,
     .navbar.pinned button:hover {
       color: var(--dark_font);

@@ -11,8 +11,6 @@
   width: 80%;
   max-width: 1440px;
 
-  background-color: #745591;
-
   position: relative;
   overflow: hidden;
 }
@@ -24,6 +22,8 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  background-color: #745591;
+  forced-color-adjust: none;
 }
 
 .poi {
@@ -90,6 +90,11 @@
 @media (prefers-color-scheme: dark) {
   .splash-border {
     color: var(--dark_bg);
+  }
+}
+@media (forced-colors: active) {
+  .splash-border {
+    color: Canvas;
   }
 }
 @media (min-width: 1800px) {
