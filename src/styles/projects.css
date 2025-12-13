@@ -1,37 +1,11 @@
 #projects {
   width: 100%;
 }
-.card-container {
-  width: 100%;
-  max-width: 1440px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minMax(0, 480px));
-  grid-auto-rows: 1fr;
-  justify-content: center;
-}
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 1em 1em 2.5em;
+.project-footer {
+  margin: 0 2em;
+  padding: 1em 1em 0;
   text-align: center;
-  opacity: 0;
-}
-
-.card.show {
-  animation-name: slideCard;
-  animation-duration: 0.75s;
-  animation-fill-mode: forwards;
-}
-
-.card-link-container a {
-  margin: 0 0.75em;
-}
-
-.card-link-container span {
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 .gallery-container {
@@ -49,6 +23,7 @@
   position: absolute;
   width: 3.5em;
   height: 3.5em;
+  box-sizing: content-box;
   top: 50%;
   transform: translate(0, -50%);
   padding: 0;
@@ -58,38 +33,41 @@
   background: none;
   transition: all 0.2s;
 
-  color: var(--dark_menu_font);
-  background-color: var(--dark_menu);
-  filter: drop-shadow(0 0.5em 0.75em #00000080);
+  color: var(--light_menu_font);
+  background-color: var(--light_bg);
 }
 .scroll-button svg{
   width: 1.25em;
 }
 .scroll-button:hover {
   cursor: pointer;
-  color: #fff;
+  color: var(--light_font);
 }
 
 .scroll-button.left {
-  left: -3.5em;
+  left: -4.5em;
   border-radius: 0 1.75em 1.75em 0;
+  padding-left: 1em;
 }
 .scroll-button.left svg{
   transform: rotate(-90deg)
 }
 .scroll-button.right {
-  right: -3.5em;
+  right: -4.5em;
   border-radius: 1.75em 0 0 1.75em;
+  padding-right: 1em;
 }
 .scroll-button.right svg{
   transform: rotate(90deg)
 }
 
 .carousel-container:hover .scroll-button.left {
-  left: 0;
+  left: -1em;
+  filter: drop-shadow(0 0.5em 0.75em #00000080);
 }
 .carousel-container:hover .scroll-button.right {
-  right: 0;
+  right: -1em;
+  filter: drop-shadow(0 0.5em 0.75em #00000080);
 }
 
 .carousel {
@@ -145,38 +123,6 @@
   width: 100%;
 }
 
-.stack-container {
-  padding-top: 1em;
-  margin: auto 0 0;
-}
-
-.stack {
-  margin: 1em 0 0.5em;
-}
-
-.stack-container div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.stackItem {
-  border: 0.0625em solid;
-  border-radius: 1.5em;
-  border-color: var(--light_menu_font);
-  color: var(--light_menu_font);
-  margin: 0.1em;
-  padding: 0.1em 0.75em;
-  
-}
-
-.project-footer {
-  margin: 0 2em;
-  padding: 1em 1em 0;
-  text-align: center;
-}
-
 @keyframes slideCard {
   0% {
     opacity: 0;
@@ -195,26 +141,12 @@
   .scroll-marker.active {
     background-color: var(--dark_font);
   }
-  .stackItem {
-    border-color: var(--dark_menu_font);
+  .scroll-button {
     color: var(--dark_menu_font);
+    background-color: var(--dark_bg);
+  }
+  .scroll-button:hover {
+    color: var(--dark_font);
   }
 }
 
-@media (min-width: 1441px) {
-  .card:nth-child(3n + 2) {
-    animation-delay: 0.1s;
-  }
-  .card:nth-child(3n + 3) {
-    animation-delay: 0.2s;
-  }
-}
-
-@media (min-width: 961px) and (max-width: 1440px) {
-  .card:nth-child(2n + 1) {
-  animation-delay: 0;
-  }
-  .card:nth-child(2n + 2) {
-    animation-delay: 0.1s;
-  }
-}
