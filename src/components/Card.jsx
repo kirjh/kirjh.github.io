@@ -55,9 +55,6 @@ function ScrollMarker({index, id}) {
 
 function Card({jsonData}) {
   const keys = Object.keys(jsonData.images);
-  const carouselSize = useRef(keys.length);
-  const currentIndex = useRef(0);
-  const carouselDigits = Math.floor(Math.log10(carouselSize.current)+1);
 
   // Construct images for carousel
   const listItems = keys.map((index) => { 
@@ -84,12 +81,14 @@ function Card({jsonData}) {
   });
 
   function LastImage() {
-    if (currentIndex.current == 0) return;
-    document.querySelector(`#${jsonData.id}${currentIndex.current-1}`).scrollIntoView({block: 'nearest'});
+    const currentMarker = document.querySelector(`.scroll-marker.${jsonData.id}.active`);
+    if (!currentMarker || !currentMarker.previousSibling) return;
+    document.querySelector(`#${currentMarker.previousSibling.id.slice(0, -6)}`).scrollIntoView({block: 'nearest'});
   }
   function NextImage() {
-    if (currentIndex.current == carouselSize.current-1) return;
-    document.querySelector(`#${jsonData.id}${currentIndex.current+1}`).scrollIntoView({block: 'nearest'});
+    const  currentMarker = document.querySelector(`.scroll-marker.${jsonData.id}.active`)
+    if (!currentMarker || !currentMarker.nextSibling) return;
+    document.querySelector(`#${currentMarker.nextSibling.id.slice(0, -6)}`).scrollIntoView({block: 'nearest'});
   }
   
   useEffect(() => {
@@ -99,50 +98,6 @@ function Card({jsonData}) {
 
     for (let i = 0; i < images.length; i++) {
       buttons[i].onclick = () => {images[i].scrollIntoView({block: 'nearest'})}
-    }
-
-    // Add intersection observers for scroll animations and carousel
-    // Reveal cards for the first time
-    const cardObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0) {
-          entry.target.classList.add("show");
-          cardObserver.unobserve(entry.target);
-        }
-      });
-    }, {threshold: [0]});
-    // Update carousel to focused image
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio < 0.75) return;
-        const id = entry.target.id.substring(0, entry.target.id.length-carouselDigits);
-        const index = entry.target.id.substring(entry.target.id.length-carouselDigits, entry.target.id.length);
-        document.querySelectorAll(`a.${id}.active`).forEach((e) => {
-          e.classList.remove("active");
-        });
-        currentIndex.current = Number(index);
-        // Update buttons to reflect active image
-        const leftButton = document.querySelector(`#${id}lbutton`);
-        const rightButton = document.querySelector(`#${id}rbutton`);
-        if (index == 0) leftButton.classList.remove("active")
-        else leftButton.classList.add("active");
-        if (index == carouselSize.current-1) rightButton.classList.remove("active")
-        else rightButton.classList.add("active");
-        document.querySelector(`#${id}${index}marker`).classList.add("active");
-      });
-    }, {threshold: [0.75]});
-    
-    document.querySelectorAll(".card").forEach((card)=> {
-      cardObserver.observe(card);
-    });
-
-    document.querySelectorAll(".card li").forEach((image)=> {
-      imageObserver.observe(image);
-    });
-
-    return () => {
-      cardObserver.disconnect();
-      imageObserver.disconnect();
     }
   }, []);
 

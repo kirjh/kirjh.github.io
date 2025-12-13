@@ -11,6 +11,51 @@ import rotypeData from '../projects/rotype.json' with {type: 'json'}
 import templateData from '../projects/card-template.json' with {type: 'json'}
 
 function Projects() {
+  // Add intersection observers for scroll animations and carousel
+  useEffect(()=> {
+    // Reveal cards for the first time
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add("show");
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold: [0]});
+    // Update carousel to focused image
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio < 0.75) return;
+        const id = entry.target.id.substring(0, entry.target.id.length-1);
+        const index = entry.target.id.substring(entry.target.id.length-1, entry.target.id.length);
+        document.querySelectorAll(`a.${id}.active`).forEach((e) => {
+          e.classList.remove("active");
+        });
+        // Update buttons to reflect active image
+        const leftButton = document.querySelector(`#${id}lbutton`);
+        const rightButton = document.querySelector(`#${id}rbutton`);
+        const scrollMarker = document.querySelector(`#${id}${index}marker`);
+        if (!scrollMarker.previousSibling) leftButton.classList.remove("active")
+        else leftButton.classList.add("active");
+        if (!scrollMarker.nextSibling) rightButton.classList.remove("active")
+        else rightButton.classList.add("active");
+        scrollMarker.classList.add("active");
+      });
+    }, {threshold: [0.75]});
+    
+    document.querySelectorAll(".card").forEach((card)=> {
+      cardObserver.observe(card);
+    });
+
+    document.querySelectorAll(".card li").forEach((image)=> {
+      imageObserver.observe(image);
+    });
+
+    return () => {
+      cardObserver.disconnect();
+      imageObserver.disconnect();
+    }
+  }, []);
   return (
     <>
       <div id="projects" className="container">

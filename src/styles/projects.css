@@ -50,7 +50,7 @@
 .scroll-button.left {
   left: -4.5em;
   border-radius: 0 1.75em 1.75em 0;
-  padding-left: 1em;
+  padding: 0 0.25em 0 0.75em;
 }
 .scroll-button.left svg{
   transform: rotate(-90deg)
@@ -58,7 +58,7 @@
 .scroll-button.right {
   right: -4.5em;
   border-radius: 1.75em 0 0 1.75em;
-  padding-right: 1em;
+  padding: 0 0.75em 0 0.25em;
 }
 .scroll-button.right svg{
   transform: rotate(90deg)
