@@ -19,9 +19,11 @@
   #about #about-1 {
     margin: 2em 2em 0;
     text-align: center;
+    max-width: 600px;
   }
   #about #about-2 {
     margin: 0 2em 2em;
     text-align: center;
+    max-width: 600px;
   }
 }
