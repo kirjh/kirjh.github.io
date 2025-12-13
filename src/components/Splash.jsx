@@ -17,7 +17,7 @@ function Border() {
           id="layer1"
           transform="translate(0.26458333,-6.6145832)">
           <path
-            style={{fill: 'currentColor', 'strokeWidth': 0.264583, 'strokeLinecap': 'round', 'strokeLineJoin': 'round'}}
+            style={{'fill': 'currentColor', 'strokeWidth': 0.264583, 'strokeLinecap': 'round', 'strokeLineJoin': 'round'}}
             d="M 13.49375,13.49375 V 6.6145832 h -0.264584 c 0,3.6531328 -2.96145,6.6145828 -6.6145828,6.6145828 C 2.9614499,13.229166 1.1045695e-7,10.267717 0,6.6145832 H -0.26458333 V 13.49375 Z"
             id="path1" />
         </g>

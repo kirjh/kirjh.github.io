@@ -9,6 +9,24 @@ import coinData from '../projects/coinanalyzer.json' with {type: 'json'}
 import rotypeData from '../projects/rotype.json' with {type: 'json'}
 import templateData from '../projects/card-template.json' with {type: 'json'}
 
+function Arrow() {
+  return (
+    <>
+      <svg className="arrow"
+        viewBox="0 0 1.2001499 1.2001499"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg">
+        <defs
+          id="defs1" />
+        <path
+          style={{'fill':'none','stroke':'currentColor','strokeWidth':'0.264583','strokeLinecap':'round','strokeLinejoin':'round','strokeDasharray':'none'}}
+          d="m 0.13235301,0.73432379 0.4677219,-0.4677219 0.46772199,0.4677219"
+          id="path1" />
+      </svg>
+    </>
+  )
+}
 function Card({jsonData}) {
   // Construct images for carousel
   const keys = Object.keys(jsonData.images);
@@ -25,6 +43,7 @@ function Card({jsonData}) {
       <a key={img} className={`scroll-marker ${jsonData.id} ${img == 0 ? "active" : ""}`} id={`${jsonData.id}${img}marker`}></a>
     )
   });
+  // Construct 
   // Construct links
   const links = jsonData.site_url ? (
     <span className="card-link-container">
@@ -41,7 +60,7 @@ function Card({jsonData}) {
       <p key={item} className="stackItem">{item}</p>
     )
   });
-
+  // Add scrollIntoView to scroll-markers
   useEffect(() => {
     const images = document.querySelectorAll(`#${jsonData.id} li`)
     const buttons = document.querySelectorAll(`#${jsonData.id} .scroll-marker-container a`)
@@ -49,17 +68,26 @@ function Card({jsonData}) {
     for (let i = 0; i < images.length; i++) {
       buttons[i].onclick = () => {
         images[i].scrollIntoView({block: 'nearest'});
+        
       }
     }
   }, [])
+  //
+  function moveLeft() {
+    
+  }
 
   return (
     <>
       <div className="card" id={jsonData.id}>
         <div className="gallery-container">
-          <ul className="carousel"> 
-            {listItems}
-          </ul>
+          <div className="carousel-container">
+            <ul className="carousel"> 
+              {listItems}
+            </ul>
+            <button className="scroll-button left"><Arrow /></button>
+            <button className="scroll-button right"><Arrow /></button>
+          </div>
           <div className="scroll-marker-container">
             {buttons}
           </div>
@@ -91,6 +119,7 @@ function Projects() {
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio < 0.75) return;
+        console.log(entry.intersectionRatio)
         const id = entry.target.id.substring(0, entry.target.id.length-1);
         document.querySelectorAll(`a.${id}.active`).forEach((e) => {
           e.classList.remove("active");
