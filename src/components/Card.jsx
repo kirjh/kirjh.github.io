@@ -4,7 +4,7 @@ import '../styles/index.css'
 
 import Heading from './Heading.jsx'
 
-import {useEffect} from 'react'
+import {useEffect, useRef} from 'react'
 
 function Arrow() {
   return (
@@ -25,9 +25,9 @@ function Arrow() {
   )
 }
 
-function CarouselImage({index, id, src, alt}) {
+function CarouselImage({id, src, alt}) {
   return (
-    <li className="image" id={id} index={index}>
+    <li className="image" id={id}>
       <img src={src} alt={alt} />
     </li>
   )  
@@ -44,14 +44,26 @@ function ProjectLinks({site, repo}) {
   );
 }
 
+function ScrollMarker({index, id}) {
+  return (
+      <a 
+        className={`scroll-marker ${id} ${index == 0 ? "active" : ""}`} 
+        id={`${id}${index}marker`}
+      />
+    )
+}
+
 function Card({jsonData}) {
-  // Construct images for carousel
   const keys = Object.keys(jsonData.images);
+  const carouselSize = useRef(keys.length);
+  const currentIndex = useRef(0);
+  const carouselDigits = Math.floor(Math.log10(carouselSize.current)+1);
+
+  // Construct images for carousel
   const listItems = keys.map((index) => { 
     return (
       <CarouselImage 
         key={index} 
-        index={index} 
         id={`${jsonData.id}${index}`} 
         src={jsonData.images[index].src} 
         alt={jsonData.images[index].alt} 
@@ -61,7 +73,7 @@ function Card({jsonData}) {
   // Construct scroll-markers
   const buttons = keys.map((index) => {
     return (
-      <a key={index} className={`scroll-marker ${jsonData.id} ${index == 0 ? "active" : ""}`} id={`${jsonData.id}${index}marker`}></a>
+      <ScrollMarker key={index} index={index} id={jsonData.id} />
     )
   });
   // Construct tech stack
@@ -70,21 +82,69 @@ function Card({jsonData}) {
       <p key={item} className="stackItem">{item}</p>
     )
   });
-  // Add scrollIntoView to scroll-markers
+
+  function LastImage() {
+    if (currentIndex.current == 0) return;
+    document.querySelector(`#${jsonData.id}${currentIndex.current-1}`).scrollIntoView({block: 'nearest'});
+  }
+  function NextImage() {
+    if (currentIndex.current == carouselSize.current-1) return;
+    document.querySelector(`#${jsonData.id}${currentIndex.current+1}`).scrollIntoView({block: 'nearest'});
+  }
+  
   useEffect(() => {
+    // Add scrollIntoView to scroll-markers
     const images = document.querySelectorAll(`#${jsonData.id} li`)
     const buttons = document.querySelectorAll(`#${jsonData.id} .scroll-marker-container a`)
 
     for (let i = 0; i < images.length; i++) {
-      buttons[i].onclick = () => {
-        images[i].scrollIntoView({block: 'nearest'});
-      }
+      buttons[i].onclick = () => {images[i].scrollIntoView({block: 'nearest'})}
     }
-  }, [])
-  //
-  function moveLeft() {
+
+    // Add intersection observers for scroll animations and carousel
+    // Reveal cards for the first time
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add("show");
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold: [0]});
+    // Update carousel to focused image
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio < 0.75) return;
+        const id = entry.target.id.substring(0, entry.target.id.length-carouselDigits);
+        const index = entry.target.id.substring(entry.target.id.length-carouselDigits, entry.target.id.length);
+        document.querySelectorAll(`a.${id}.active`).forEach((e) => {
+          e.classList.remove("active");
+        });
+        currentIndex.current = Number(index);
+        // Update buttons to reflect active image
+        const leftButton = document.querySelector(`#${id}lbutton`);
+        const rightButton = document.querySelector(`#${id}rbutton`);
+        if (index == 0) leftButton.classList.remove("active")
+        else leftButton.classList.add("active");
+        if (index == carouselSize.current-1) rightButton.classList.remove("active")
+        else rightButton.classList.add("active");
+        document.querySelector(`#${id}${index}marker`).classList.add("active");
+      });
+    }, {threshold: [0.75]});
     
-  }
+    document.querySelectorAll(".card").forEach((card)=> {
+      cardObserver.observe(card);
+    });
+
+    document.querySelectorAll(".card li").forEach((image)=> {
+      imageObserver.observe(image);
+    });
+
+    return () => {
+      cardObserver.disconnect();
+      imageObserver.disconnect();
+    }
+  }, []);
 
   return (
     <>
@@ -94,8 +154,8 @@ function Card({jsonData}) {
             <ul className="carousel"> 
               {listItems}
             </ul>
-            <button className="scroll-button left" id={`${jsonData.id}lbutton`} onClick={()=>{}}><Arrow /></button>
-            <button className="scroll-button right" id={`${jsonData.id}rbutton`}><Arrow /></button>
+            <button className="scroll-button left" id={`${jsonData.id}lbutton`} onClick={LastImage} tabIndex="-1"><Arrow /></button>
+            <button className="scroll-button right" id={`${jsonData.id}rbutton`} onClick={NextImage} tabIndex="-1"><Arrow /></button>
           </div>
           <div className="scroll-marker-container">
             {buttons}

@@ -33,13 +33,16 @@
   background: none;
   transition: all 0.2s;
 
-  color: var(--light_menu_font);
+  color: var(--light_sub_font);
   background-color: var(--light_bg);
 }
 .scroll-button svg{
   width: 1.25em;
 }
-.scroll-button:hover {
+.scroll-button.active {
+  color: var(--light_menu_font);
+}
+.scroll-button.active:hover {
   cursor: pointer;
   color: var(--light_font);
 }
@@ -142,10 +145,13 @@
     background-color: var(--dark_font);
   }
   .scroll-button {
-    color: var(--dark_menu_font);
+    color: var(--dark_sub_font);
     background-color: var(--dark_bg);
   }
-  .scroll-button:hover {
+  .scroll-button.active {
+    color: var(--dark_menu_font);
+  }
+  .scroll-button.active:hover {
     color: var(--dark_font);
   }
 }
