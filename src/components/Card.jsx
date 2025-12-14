@@ -46,7 +46,7 @@ function ProjectLinks({site, repo}) {
   } else if (site) {
     return <a className="link" href={site} target="_blank">Web Page</a>
   } else {
-    return <span className="subtext"> Source Unavailable </span> 
+    return <span className="subtext unavail"> Source Unavailable </span> 
   }
 }
 
