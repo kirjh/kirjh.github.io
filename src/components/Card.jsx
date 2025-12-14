@@ -33,15 +33,21 @@ function CarouselImage({id, src, alt}) {
   )  
 }
 function ProjectLinks({site, repo}) {
-  return site ? (
-    <div className="card-link-container">
-      <a className="link left" href={site} target="_blank">Web page</a>
-      <span className="subtext" aria-hidden="true">|</span>
-      <a className="link right" href={repo} target="_blank">Github repo</a>
-    </div>
-  ) : (
-    <a className="link" href={repo} target="_blank">Github repo</a>
-  );
+  if (site && repo) {
+    return (
+      <div className="card-link-container">
+        <a className="link left" href={site} target="_blank">Web Page</a>
+        <span className="subtext" aria-hidden="true">|</span>
+        <a className="link right" href={repo} target="_blank">Github Repo</a>
+      </div>
+    )
+  } else if (repo) {
+    return <a className="link" href={repo} target="_blank">Github Repo</a>
+  } else if (site) {
+    return <a className="link" href={site} target="_blank">Web Page</a>
+  } else {
+    return <span className="subtext"> Source Unavailable </span> 
+  }
 }
 
 function ScrollMarker({index, id}) {

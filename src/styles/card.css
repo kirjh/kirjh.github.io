@@ -65,7 +65,7 @@
   color: var(--light_menu_font);
   margin: 0.1em;
   padding: 0.1em 0.75em;
-  
+  cursor: default;
 }
 
 @media (prefers-color-scheme: dark) {

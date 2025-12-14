@@ -3,7 +3,7 @@
   "name": "Template",
   "subtext": "Hello World!",
 
-  "repo_url": "https://github.com/",
+  "repo_url": null,
   "site_url": null,
 
   "description": "Description.",
