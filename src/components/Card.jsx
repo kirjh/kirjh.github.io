@@ -34,13 +34,13 @@ function CarouselImage({id, src, alt}) {
 }
 function ProjectLinks({site, repo}) {
   return site ? (
-    <span className="card-link-container">
-      <a className="link" href={site} target="_blank">Website</a>
+    <div className="card-link-container">
+      <a className="link left" href={site} target="_blank">Web page</a>
       <span className="subtext" aria-hidden="true">|</span>
-      <a className="link" href={repo} target="_blank">Github page</a>
-    </span>
+      <a className="link right" href={repo} target="_blank">Github repo</a>
+    </div>
   ) : (
-    <a className="link" href={repo} target="_blank">Github page</a>
+    <a className="link" href={repo} target="_blank">Github repo</a>
   );
 }
 

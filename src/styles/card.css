@@ -22,13 +22,24 @@
   animation-fill-mode: forwards;
 }
 
-.card-link-container a {
-  margin: 0 0.75em;
+.card-link-container {
+  margin: 0 auto;
+  position: relative;
 }
 
 .card-link-container span {
   -webkit-user-select: none;
   user-select: none;
+}
+.card-link-container .link {
+  position: absolute;
+  white-space: nowrap;
+}
+.card-link-container .link.left {
+  right: 0.75em;
+}
+.card-link-container .link.right {
+  left: 0.75em;
 }
 
 .stack-container {
