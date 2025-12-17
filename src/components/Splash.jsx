@@ -50,8 +50,8 @@ function Splash() {
 
   function mouseParallax(event) {
     if (window.innerWidth <= 1080) return;
-    mouseX.current = 2 * ((window.innerWidth / 2) - event.screenX) / window.innerWidth;
-    mouseY.current = 2 * ((window.innerHeight / 2) - event.screenY) / window.innerHeight;
+    mouseX.current = 2 * ((window.innerWidth / 2) - event.clientX) / window.innerWidth;
+    mouseY.current = 2 * ((window.innerHeight / 2) - event.clientY) / window.innerHeight;
     parallaxEffect();
   }
   function parallaxEffect() {
