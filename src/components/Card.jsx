@@ -55,8 +55,25 @@ function ScrollMarker({index, id}) {
       <a 
         className={`scroll-marker ${id} ${index == 0 ? "active" : ""}`} 
         id={`${id}${index}marker`}
+        tabIndex="-1"
       />
     )
+}
+
+function ScrollButton({classes, _id, func, title}) {
+  return (
+    <button 
+      title={title}
+      className={classes}
+      id={_id} 
+      onClick={func} 
+      tabIndex="0" 
+      type="button">
+        <span>
+          <Arrow />
+        </span> 
+    </button>
+  )
 }
 
 function Card({jsonData}) {
@@ -92,18 +109,22 @@ function Card({jsonData}) {
     document.querySelector(`#${currentMarker.previousSibling.id.slice(0, -6)}`).scrollIntoView({block: 'nearest'});
   }
   function NextImage() {
-    const  currentMarker = document.querySelector(`.scroll-marker.${jsonData.id}.active`)
+    const  currentMarker = document.querySelector(`.scroll-marker.${jsonData.id}.active`);
     if (!currentMarker || !currentMarker.nextSibling) return;
     document.querySelector(`#${currentMarker.nextSibling.id.slice(0, -6)}`).scrollIntoView({block: 'nearest'});
   }
   
   useEffect(() => {
     // Add scrollIntoView to scroll-markers
-    const images = document.querySelectorAll(`#${jsonData.id} li`)
-    const buttons = document.querySelectorAll(`#${jsonData.id} .scroll-marker-container a`)
+    const images = document.querySelectorAll(`#${jsonData.id} li`);
+    const buttons = document.querySelectorAll(`#${jsonData.id} .scroll-marker-container a`);
 
     for (let i = 0; i < images.length; i++) {
-      buttons[i].onclick = () => {images[i].scrollIntoView({block: 'nearest'})}
+      buttons[i].onclick = () => {images[i].scrollIntoView({block: 'nearest'})};
+      buttons[i].onkeydown = (event) => {
+        if (event.key != "Enter") return;
+        images[i].scrollIntoView({block: 'nearest'})
+      };
     }
   }, []);
 
@@ -112,11 +133,11 @@ function Card({jsonData}) {
       <div className="card" id={jsonData.id}>
         <div className="gallery-container">
           <div className="carousel-container">
-            <ul className="carousel"> 
+            <ul className="carousel" tabIndex="-1"> 
               {listItems}
             </ul>
-            <button className="scroll-button left" id={`${jsonData.id}lbutton`} onClick={LastImage} tabIndex="-1"><Arrow /></button>
-            <button className="scroll-button right" id={`${jsonData.id}rbutton`} onClick={NextImage} tabIndex="-1"><Arrow /></button>
+            <ScrollButton classes="scroll-button left" _id={`${jsonData.id}lbutton`} func={LastImage} title="Go to last image" />
+            <ScrollButton classes="scroll-button right" _id={`${jsonData.id}rbutton`} func={NextImage} title="Go to next image" />
           </div>
           <div className="scroll-marker-container">
             {buttons}

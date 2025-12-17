@@ -40,16 +40,18 @@ function Splash() {
     if (ref.current) {
       observer.observe(ref.current);
     }
-    document.addEventListener("mousemove", mouseParallax);
+    document.addEventListener("pointermove", mouseParallax);
     document.addEventListener("scroll", parallaxEffect);
     return () => {
       observer.disconnect();
-      document.removeEventListener("mousemove", parallaxEffect);
+      document.removeEventListener("pointermove", parallaxEffect);
+      document.removeEventListener("scroll", parallaxEffect);
     }
   }, []);
 
   function mouseParallax(event) {
     if (window.innerWidth <= 1080) return;
+    if (event.pointerType != "mouse") return;
     mouseX.current = 2 * ((window.innerWidth / 2) - event.clientX) / window.innerWidth;
     mouseY.current = 2 * ((window.innerHeight / 2) - event.clientY) / window.innerHeight;
     parallaxEffect();

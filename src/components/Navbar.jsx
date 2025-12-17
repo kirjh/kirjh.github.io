@@ -13,6 +13,11 @@ function Navbar() {
     removeClasses();
   }
 
+  function keyDown(event, href) {
+    if (event.key != "Enter") return;
+    goto(href);
+  }
+
   function openMenu() {
     const menu = document.querySelector("#menu");
     menu.classList.toggle("show");
@@ -40,10 +45,10 @@ function Navbar() {
       <div className="navbar">
         <button type="button" onClick={()=> openMenu()} tabIndex="0">Menu</button>
         <div id="menu">
-          <a onClick={()=> goto("#home") } tabIndex="0">Home</a>
-          <a onClick={()=> goto("#about")} tabIndex="0">About</a>
-          <a onClick={()=> goto("#projects")} tabIndex="0">Projects</a>
-          <a onClick={()=> goto("#contact")} tabIndex="0">Contact</a>
+          <a onClick={()=> goto("#home")} onKeyDown={(event)=> keyDown(event, "#home")} tabIndex="0">Home</a>
+          <a onClick={()=> goto("#about")} onKeyDown={(event)=> keyDown(event, "#about")} tabIndex="0">About</a>
+          <a onClick={()=> goto("#projects")} onKeyDown={(event)=> keyDown(event, "#projects")} tabIndex="0">Projects</a>
+          <a onClick={()=> goto("#contact")} onKeyDown={(event)=> keyDown(event, "#contacte")} tabIndex="0">Contact</a>
         </div>
       </div>
       <div className="navbar-spacer"></div>

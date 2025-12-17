@@ -2,18 +2,21 @@
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100vh;
 }
 
 .contact-body {
   display: flex;
-  flex: 1 0 auto;
+  flex: 0 1 auto;
   flex-direction: column;
   justify-content: start;
   
-  margin-top: 5vh;
-  margin-bottom: 15vh;
+  margin: 5em 0 15em;
   text-align: center;
+
+  margin: 5em 0;
+  position: sticky;
+  top: 45%;
 }
 
 .contact-body p.subtext {
@@ -43,6 +46,9 @@
   color: var(--light_menu_font);
   background-color: var(--light_menu);
   filter: drop-shadow(0 0.5em 0.75em #00000080);
+
+  position: sticky;
+  top: calc(100% - 3em);
 }
 
 @media (max-aspect-ratio:2/4) or (max-height: 864px) {

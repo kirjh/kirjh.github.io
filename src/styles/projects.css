@@ -21,7 +21,7 @@
 
 .scroll-button {
   position: absolute;
-  width: 3.5em;
+  width: 2em;
   height: 3.5em;
   box-sizing: content-box;
   top: 50%;
@@ -32,45 +32,50 @@
   border: none;
   background: none;
   transition: all 0.2s;
-
-  color: var(--dark_sub_font);
+  color: var(--light_menu_font);
+  
   background-color: var(--light_bg);
 }
 .scroll-button svg{
   width: 1.25em;
 }
-.scroll-button.active {
-  color: var(--light_menu_font);
-}
-.scroll-button.active:hover {
+.scroll-button:hover {
   cursor: pointer;
   color: var(--light_font);
 }
+.scroll-button:disabled {
+  color: var(--dark_sub_font);
+  cursor: default;
+}
 
 .scroll-button.left {
-  left: -4.5em;
+  left: -3.75em;
   border-radius: 0 1.75em 1.75em 0;
-  padding: 0 0.25em 0 0.75em;
+  padding: 0 1em 0 0.75em;
 }
 .scroll-button.left svg{
   transform: rotate(-90deg)
 }
 .scroll-button.right {
-  right: -4.5em;
+  right: -3.75em;
   border-radius: 1.75em 0 0 1.75em;
-  padding: 0 0.75em 0 0.25em;
+  padding: 0 0.75em 0 1em;
 }
 .scroll-button.right svg{
   transform: rotate(90deg)
 }
 
-.carousel-container:hover .scroll-button.left {
-  left: -1em;
-  filter: drop-shadow(0 0.5em 0.75em #00000080);
+.carousel-container:hover .scroll-button.left,
+.scroll-button.left:focus,
+.scroll-button.left:has(+ .scroll-button.right:focus) {
+  left: 0;
+  filter: drop-shadow(0 0.5em 0.75em #00000080);z-index: 10;
 }
-.carousel-container:hover .scroll-button.right {
-  right: -1em;
-  filter: drop-shadow(0 0.5em 0.75em #00000080);
+.carousel-container:hover .scroll-button.right,
+.scroll-button.right:focus, 
+.scroll-button.left:focus ~ .scroll-button.right {
+  right: 0;
+  filter: drop-shadow(0 0.5em 0.75em #00000080);z-index: 10;
 }
 
 .carousel {
@@ -145,14 +150,14 @@
     background-color: var(--dark_font);
   }
   .scroll-button {
-    color: var(--light_sub_font);
+    color: var(--dark_menu_font);
     background-color: var(--dark_bg);
   }
-  .scroll-button.active {
-    color: var(--dark_menu_font);
-  }
-  .scroll-button.active:hover {
+  .scroll-button:hover {
     color: var(--dark_font);
+  }
+  .scroll-button:disabled {
+    color: var(--light_sub_font);
   }
 }
 

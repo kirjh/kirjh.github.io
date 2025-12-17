@@ -35,18 +35,14 @@ function Projects() {
         const leftButton = document.querySelector(`#${id}lbutton`);
         const rightButton = document.querySelector(`#${id}rbutton`);
         const scrollMarker = document.querySelector(`#${id}${index}marker`);
-        if (!scrollMarker.previousSibling) leftButton.classList.remove("active")
-        else leftButton.classList.add("active");
-        if (!scrollMarker.nextSibling) rightButton.classList.remove("active")
-        else rightButton.classList.add("active");
+        leftButton.disabled = !scrollMarker.previousSibling;
+        rightButton.disabled = !scrollMarker.nextSibling;
         scrollMarker.classList.add("active");
       });
     }, {threshold: [0.75]});
-    
     document.querySelectorAll(".card").forEach((card)=> {
       cardObserver.observe(card);
     });
-
     document.querySelectorAll(".card li").forEach((image)=> {
       imageObserver.observe(image);
     });
@@ -69,7 +65,7 @@ function Projects() {
           <Card jsonData={templateData}/>
         </div>
         <div className="project-footer">
-          <p>Would you like to know more? My full Github repository is available <a className="link" href={"https://github.com/kirjh?tab=repositories"} target="_blank">here</a>.</p>
+          <p>Would you like to know more? <a className="link" href={"https://github.com/kirjh?tab=repositories"} target="_blank">My full Github repository is available here</a>.</p>
         </div>
       </div>
     </>
