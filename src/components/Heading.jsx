@@ -5,7 +5,7 @@ function Heading({h1, su}) {
   return (
     <>
       <h1 className="heading">{h1}</h1>
-      <p className="subheading subtext">{su}</p>
+      <h2 className="subheading subtext">{su}</h2>
     </>
   )
 }
