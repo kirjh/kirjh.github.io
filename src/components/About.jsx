@@ -1,8 +1,29 @@
 import '../styles/about.css'
 import '../styles/index.css'
 import Heading from './Heading.jsx'
+import {useEffect} from 'react'
 
 function About() {
+  function themedText(event) {
+    document.getElementById("theme-text").innerHTML = (event.matches) ? "dark mode" : "light mode";
+  }
+  function sizedText(event) {
+    document.getElementById("size-text").innerHTML = (event.matches) ? "on a wider screen" : "on a smaller screen";
+  }
+  useEffect(() => {
+    const theme = window.matchMedia("(prefers-color-scheme: dark)");
+    const size = window.matchMedia("(orientation: portrait) or (max-width: 1080px)");
+    themedText(theme);
+    sizedText(size);
+    
+    theme.addEventListener("change", themedText);
+    size.addEventListener("change", sizedText);
+
+    return () => {
+      theme.removeEventListener("change", themedText);
+      size.removeEventListener("change", sizedText);
+    }
+  }, []);
   return (
     <>
       <div id="about" className="flex-container">

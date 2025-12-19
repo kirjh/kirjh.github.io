@@ -7,8 +7,6 @@ import Contact from './Contact.jsx'
 import '../styles/App.css'
 
 function Home() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Splash />

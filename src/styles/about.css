@@ -12,19 +12,6 @@
   margin-top: 12em;
 }
 
-#theme-text::after {
-  content: "dark mode";
-}
-@media (prefers-color-scheme: dark) {
-  #theme-text::after {
-    content: "light mode";
-  }
-}
-
-#size-text::after {
-  content: "on a smaller screen";
-}
-
 @media (orientation: portrait) or (max-width: 1080px) {
   #about #about-1 {
     margin: 2em 2em 0;
@@ -35,8 +22,5 @@
     margin: 0 2em 2em;
     text-align: center;
     max-width: 600px;
-  }
-  #size-text::after {
-    content: "on a wider screen";
   }
 }
