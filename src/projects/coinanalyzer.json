@@ -6,21 +6,21 @@
   "repo_url": "https://github.com/",
   "site_url": null,
 
-  "description": "A web app that performs image recognition using a convolutional neural network. THe CNN is implemented with the Scikit-Learn library, and training consisteted of preprocessing raw data and learning through stochastic gradient descent. 2025 team project.",
-  "stack": ["Python", "PyTorch", "Vercel", "Render"],
+  "description": "A web app that performs image recognition using a convolutional neural network. The CNN is implemented with the Pytorch library and training consisteted of preprocessing raw data and learning through stochastic gradient descent. 2025 team project.",
+  "stack": ["Expo Go", "HTML", "Flask", "Python", "PyTorch", "React", "Render", "Vercel"],
 
   "images": {
     "0": {
-      "src": "/Untitled.png",
-      "alt": "Placeholder image."
+      "src": "/coinanalyzer/coin_penny.png",
+      "alt": "A screenshot of the coin analyzer. On the left is an image of a one cent U.S. coin. On the right is the program's prediction of the image being that of a one cent coin."
     },
     "1": {
-      "src": "/default_image.svg",
-      "alt": "Placeholder image."
+      "src": "/coinanalyzer/coin_nickel.png",
+      "alt": "A screenshot of the coin analyzer. On the left is an image of a five cent U.S. coin. On the right is the program's prediction of the image being that of a five cent coin."
     },
     "2": {
-      "src": "/default_image.svg",
-      "alt": "Placeholder image."
+      "src": "/coinanalyzer/coin_quarter.png",
+      "alt": "A screenshot of the coin analyzer. On the left is an image of a twenty-five cent U.S. coin. On the right is the program's prediction of the image being that of a twenty-five cent coin."
     }
   }
 }

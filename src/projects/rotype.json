@@ -6,21 +6,17 @@
   "repo_url": "https://github.com/",
   "site_url": null,
 
-  "description": "A typing test website that tracks skill heuristics and formulates informed suggestions for improvement with the help of Gemini AI. Features standard typing test functions and an assistive chatbot. 2025 team project.",
-  "stack": ["React", "HTML", "Tailwind", "Gemini AI", "Oceanify"],
+  "description": "A typing test website that tracks skill heuristics and formulates informed suggestions for improvement with the assistance of Gemini AI. Features standard typing test functions and an assistive chatbot. 2025 team project.",
+  "stack": ["Gemini AI", "HTML", "Oceanify", "React", "Selenium", "Tailwind"],
 
   "images": {
     "0": {
-      "src": "/default_image.svg",
-      "alt": "Placeholder image."
+      "src": "/rotype/rotype_results.png",
+      "alt": "A screenshot of the typing test interface showing the user's typing test results, as well as the user's conversation history with Gemini AI. The AI is relaying to the user which keys they struggled with and where the use can focus on improvement."
     },
     "1": {
-      "src": "/default_image.svg",
-      "alt": "Placeholder image."
-    },
-    "2": {
-      "src": "/default_image.svg",
-      "alt": "Placeholder image."
+      "src": "/rotype/rotype_test.png",
+      "alt": "A screenshot of the typing test interface showing a typing test being conducted. The typing test text is generated from the user's conversation with Gemini AI, and typing errors are highlighted in red."
     }
   }
 }

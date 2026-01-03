@@ -147,7 +147,6 @@ function Card({jsonData}) {
         <ProjectLinks site={jsonData.site_url} repo={jsonData.repo_url}/>
         <p>{jsonData.description}</p>
         <div className="stack-container">
-          <p className="stack">Tech stack:</p>
           <div>
             {stack}
           </div>
