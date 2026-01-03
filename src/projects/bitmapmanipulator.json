@@ -2,11 +2,12 @@
   "id": "bitmapmanipulator",
   "name": "Bitmap Manipulator",
   "subtext": "Pixel manipulation and image compression.",
+  "year": "2024",
 
   "repo_url": "https://github.com/kirjh/bitmap-manipulator",
   "site_url": null,
 
-  "description": "A python app that edits and compresses images featuring a guided user interface. The user has the option to change brightness and size, as well as remove RGB colour channels. The lossless compression feature employs a custom LZW encoding algorithm.",
+  "description": "A fully Python app that edits and compresses images featuring a guided user interface. The user has the option to change brightness and size, as well as remove RGB colour channels. The lossless compression feature employs a custom LZW encoding algorithm.",
   "stack": ["Python"],
 
   "images": {
