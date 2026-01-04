@@ -75,8 +75,8 @@ function Contact() {
         <div className="contact-body">
           <div className="contact-card-container">
             <ContactCard src={emailLogo} href="mailto:nf_LAFtSqGANh4g33p63usL4uTcgKuLUqAk5qF3A64SYXLNq" text="Email" alt=""/>
-            <ContactCard src={githubLogo} href="https://github.com" text="Github" alt=""/>
-            <ContactCard src={linkedinLogo} href="https://linkedin.com" text="Linkedin" alt=""/>
+            <ContactCard src={githubLogo} href="https://github.com/kirjh" text="Github" alt=""/>
+            <ContactCard src={linkedinLogo} href="https://linkedin.com/in/tobylin43" text="Linkedin" alt=""/>
           </div>
           <p className="subtext">Click any link above to get started.</p>
         </div>
