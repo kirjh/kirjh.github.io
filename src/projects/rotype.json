@@ -4,7 +4,7 @@
   "subtext": "An AI assisted typing test.",
   "year": "2025",
 
-  "repo_url": "https://github.com/",
+  "repo_url": "https://github.com/CMPT-276-SPRING-2025/final-project-23-fields",
   "site_url": null,
 
   "description": "A typing test website that tracks skill heuristics and formulates informed suggestions for improvement with the assistance of Gemini AI. Features standard typing test functions and an assistive chatbot. 2025 team project.",

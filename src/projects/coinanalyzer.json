@@ -4,7 +4,7 @@
   "subtext": "Image recognition using Neural Networks.",
   "year": "2025",
 
-  "repo_url": "https://github.com/",
+  "repo_url": "https://github.com/eMongoose/BanknoteAnalyzer",
   "site_url": null,
 
   "description": "A web app that performs image recognition using a convolutional neural network. The CNN is implemented with the Pytorch library and training consisteted of preprocessing raw data and learning through stochastic gradient descent. 2025 team project.",
