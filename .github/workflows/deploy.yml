@@ -20,6 +20,8 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+env:
+  VITE_EMAIL_KEY: ${{ secrets.VITE_EMAIL_KEY }}
 jobs:
   # Single deploy job since we're just deploying
   deploy:
