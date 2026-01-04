@@ -5,7 +5,7 @@ import {useEffect} from 'react'
 
 function About() {
   function themedText(event) {
-    document.getElementById("theme-text").innerHTML = (event.matches) ? "dark mode" : "light mode";
+    document.getElementById("theme-text").innerHTML = (event.matches) ? "light mode" : "dark mode";
   }
   function sizedText(event) {
     document.getElementById("size-text").innerHTML = (event.matches) ? "on a wider screen" : "on a smaller screen";
@@ -35,7 +35,7 @@ function About() {
             I have continuously improved my skills since and I often use my knowledge to assist and teach my peers. 
             I currently work as a part-time <span className="highlight">Scratch</span> and <span className="highlight">Python</span> tutor in addition to my studies.
           </p>
-          <p>I enjoy art and graphic design in my free time and had a blast designing this UI. This page is <span className="highlight">fully responsive</span> and also supports <span id="theme-text"></span>. Give it a try <span id="size-text"></span>!</p>
+          <p>I enjoy art and graphic design in my free time and had a blast designing this UI. This page is <span className="highlight">fully responsive</span> and also supports <span id="theme-text">&lt;Javascript Required&gt;</span>. Give it a try <span id="size-text"></span>!</p>
         </div>
         <div id="about-2">
           <Heading h1="What I do" su="I dabble here and there."/>
