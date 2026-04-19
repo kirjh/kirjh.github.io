@@ -1,0 +1,23 @@
+{
+  "id": "sosam",
+  "name": "SOSAM",
+  "subtext": "Segment Organs with Segment Anything Models.",
+  "year": "2026",
+
+  "repo_url": null,
+  "site_url": null,
+
+  "description": "Project to determine the feasibility of segmenting three dimensional medical images using two dimensional SAM models. Work involved slicing 3D volumes from a dataset of over 200 images and preprocessing slices using various methods. 2026 team project.",
+  "stack": ["Jupyter Notebook", "Python"],
+
+  "images": {
+    "0": {
+      "src": "/sosam/419_scan.png",
+      "alt": "A sample slice of a CT scan. A blue box is drawn around the organ of interest."
+    },
+    "1": {
+      "src": "/sosam/419_segment.png",
+      "alt": "A sample slice of a segmented liver. A blue box is drawn around the liver."
+    }
+  }
+}

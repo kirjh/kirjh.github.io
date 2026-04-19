@@ -1,0 +1,27 @@
+{
+  "id": "database354",
+  "name": "goDB Database Viewer",
+  "subtext": "Final project for CMPT354.",
+  "year": "2026",
+
+  "repo_url": "https://github.com/kirjh/354database",
+  "site_url": null,
+
+  "description": "Full stack application that allows registered users to search for entries, and make modifications in a database. Simple and clean interface served by a Python backend and SQL database, capable of querying thousands of entries responsively.",
+  "stack": ["CSS", "Flask", "HTML", "JavaScript", "Microsoft SQL Server", "Python", "SQL"],
+
+  "images": {
+    "0": {
+      "src": "/database354/354_businesses.png",
+      "alt": "A screenshot of the search results for businesses matching the following pattern: name = Tim Horton, city = Edmonton, and sorted by number of stars. There are 41 results displayed in the main window on the page."
+    },
+    "1": {
+      "src": "/database354/354_user.png",
+      "alt": "A screenshot of the search results for users matching the following pattern: name = Mary, minimum review count = 10, average stars = 4.2. There are 10 results displayed in the main window on the page."
+    },
+    "2": {
+      "src": "/database354/354_login.png",
+      "alt": "A screenshot of the login page. There is an entry for the user to input a user ID, and a button to submit a login attempt."
+    }
+  }
+}

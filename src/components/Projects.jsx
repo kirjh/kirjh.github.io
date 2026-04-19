@@ -9,6 +9,8 @@ import galaData from '../projects/galatimer.json' with {type: 'json'}
 import coinData from '../projects/coinanalyzer.json' with {type: 'json'}
 import rotypeData from '../projects/rotype.json' with {type: 'json'}
 import bitmapData from '../projects/bitmapmanipulator.json' with {type: 'json'}
+import database354 from '../projects/database354.json' with {type: 'json'}
+import sosamData from '../projects/sosam.json' with {type: 'json'}
 
 function Projects() {
   // Add intersection observers for scroll animations and carousel
@@ -59,6 +61,8 @@ function Projects() {
           <Heading h1="My projects" su="A curated list of things I've made." />
         </div>
         <div className="card-container">
+          <Card jsonData={database354}/>
+          <Card jsonData={sosamData}/>
           <Card jsonData={galaData}/>
           <Card jsonData={coinData}/>
           <Card jsonData={bitmapData}/>
